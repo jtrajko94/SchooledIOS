@@ -21,8 +21,4 @@ class LoginViewController: UIViewController {
         buttonStyling.defaultStyling(button: _loginButton)
         buttonStyling.defaultStyling(button: _registerButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

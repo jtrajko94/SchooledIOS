@@ -19,8 +19,4 @@ class SignUpViewController: UIViewController {
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _signUpButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

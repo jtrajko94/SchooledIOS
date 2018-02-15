@@ -19,9 +19,5 @@ class ViewController: UIViewController {
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _signInWithEmailButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 

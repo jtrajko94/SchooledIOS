@@ -15,6 +15,11 @@
 		0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C320315D0D007C44BB /* ButtonStyling.swift */; };
 		0531D9C620316132007C44BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C520316132007C44BB /* LoginViewController.swift */; };
 		0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C920316462007C44BB /* SignUpViewController.swift */; };
+		054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */; };
+		054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */; };
+		054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA162034007E00FD42B1 /* HomePageViewController.swift */; };
+		054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */; };
+		054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		0531D9C320315D0D007C44BB /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
 		0531D9C520316132007C44BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0531D9C920316462007C44BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSelectionViewController.swift; sourceTree = "<group>"; };
+		054FBA162034007E00FD42B1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
+		054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,11 @@
 				0508446E2030027300485109 /* ViewController.swift */,
 				0531D9C520316132007C44BB /* LoginViewController.swift */,
 				0531D9C920316462007C44BB /* SignUpViewController.swift */,
+				054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */,
+				054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */,
+				054FBA162034007E00FD42B1 /* HomePageViewController.swift */,
+				054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */,
+				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,10 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */,
+				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
+				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
+				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
 				0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */,
+				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
