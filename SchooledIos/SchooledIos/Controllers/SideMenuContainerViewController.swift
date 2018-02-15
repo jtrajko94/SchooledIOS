@@ -23,7 +23,7 @@ class SideMenuContainerViewController: UIViewController {
     @objc func toggleSideMenu(){
         if sideMenuOpen {
             sideMenuOpen = false
-            _sideMenuOffsetConstraint.constant = -240
+            _sideMenuOffsetConstraint.constant = -200
         } else {
             sideMenuOpen = true
             _sideMenuOffsetConstraint.constant = 0
