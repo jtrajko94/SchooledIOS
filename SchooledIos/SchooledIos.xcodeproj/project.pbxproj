@@ -20,6 +20,7 @@
 		054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA162034007E00FD42B1 /* HomePageViewController.swift */; };
 		054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */; };
 		054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */; };
+		054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		054FBA162034007E00FD42B1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
 		054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				054FBA162034007E00FD42B1 /* HomePageViewController.swift */,
 				054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */,
 				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
+				054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */,
 				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
+				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,

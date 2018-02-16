@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var _logInButton: UIButton!
     @IBOutlet weak var _signUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class SignUpViewController: UIViewController {
         //Apply Styling
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _signUpButton)
+        buttonStyling.defaultStyling(button: _logInButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
