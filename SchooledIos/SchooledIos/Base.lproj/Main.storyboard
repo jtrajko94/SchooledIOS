@@ -14,6 +14,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Bold</string>
             <string>ChalkboardSE-Regular</string>
         </array>
     </customFonts>
@@ -74,16 +75,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foa-tq-POX">
-                                <rect key="frame" x="89.5" y="315" width="196" height="37"/>
+                                <rect key="frame" x="83.5" y="315" width="208" height="37"/>
                                 <state key="normal" backgroundImage="facebookLoginSmall"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AN-sS-95l">
-                                <rect key="frame" x="89.5" y="395" width="196" height="37"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
-                                <size key="titleShadowOffset" width="0.25" height="0.25"/>
+                                <rect key="frame" x="83.5" y="395" width="208" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <size key="titleShadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                                 <state key="normal" title="    Sign In With Email    ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.61857096354166663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Bx1-YA-srl" kind="show" id="EiV-4N-td4"/>
@@ -244,11 +245,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E35-jo-TiN">
-                                <rect key="frame" x="108.5" y="606" width="158" height="41"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                <size key="titleShadowOffset" width="0.20000000000000001" height="0.20000000000000001"/>
+                                <rect key="frame" x="108" y="606" width="160" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                <size key="titleShadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="TKU-QD-l7Z" kind="show" id="Kdb-Yi-1TZ"/>
@@ -264,19 +265,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="250.5" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-kh-tYo">
-                                                <rect key="frame" x="42.5" y="0.0" width="166" height="109"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250.5" height="109"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-Kf-SGs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="68"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="250.5" height="68"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P65-DC-jpo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P65-DC-jpo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-s9-Kwg">
-                                                                <rect key="frame" x="0.0" y="38" width="166" height="30"/>
+                                                                <rect key="frame" x="0.0" y="38" width="250.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -284,29 +285,30 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-JI-EaI">
-                                                        <rect key="frame" x="0.0" y="68" width="166" height="41"/>
+                                                        <rect key="frame" x="0.0" y="68" width="250.5" height="41"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
-                                                        <size key="titleShadowOffset" width="0.25" height="0.25"/>
+                                                        <size key="titleShadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                                                         <state key="normal" title="       Forgot Password?      ">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3u-NQ-KhP">
-                                                <rect key="frame" x="42.5" y="109" width="166" height="41"/>
-                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <size key="titleShadowOffset" width="0.20000000000000001" height="0.20000000000000001"/>
+                                                <rect key="frame" x="0.0" y="109" width="250.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                                <size key="titleShadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="F3u-NQ-KhP" firstAttribute="width" secondItem="xg9-JI-EaI" secondAttribute="width" id="B9f-Na-XDz"/>
                                             <constraint firstItem="F3u-NQ-KhP" firstAttribute="height" secondItem="xg9-JI-EaI" secondAttribute="height" id="dDF-Vj-xb4"/>
+                                            <constraint firstAttribute="width" secondItem="gO9-Kf-SGs" secondAttribute="width" id="yJw-Wn-5Hn"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -315,12 +317,12 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to SCHOOLED?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcf-Em-tZa">
-                                <rect key="frame" x="108.5" y="577.5" width="158" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="108" y="573" width="160" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="0.20000000000000001" height="0.20000000000000001"/>
+                                <color key="shadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
