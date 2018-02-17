@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "smallLogo.png",
+      "filename" : "selectyourschool.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mediumLogo.png",
+      "filename" : "select school 5.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "schooled 6+.png",
+      "filename" : "select your school 6+.png",
       "scale" : "3x"
     }
   ],
