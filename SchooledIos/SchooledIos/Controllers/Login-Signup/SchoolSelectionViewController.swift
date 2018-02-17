@@ -8,11 +8,42 @@
 
 import UIKit
 
-class SchoolSelectionViewController: UIViewController {
+class SchoolSelectionViewController: UIViewController{
 
+    @IBOutlet weak var _stateSelectionTextField: UITextField!
+    let statesSelectionDelegate = StatePickerDelegate()
+    
+    @IBOutlet weak var _schoolTypeTextField: UITextField!
+    let schoolTypeDelegate = SchoolTypePickerDelegate()
+    
+    @IBOutlet weak var _schoolSelectionTextField: UITextField!
+    let schoolSelectionDelegate = SchoolPickerDelegate()
+    
+    @IBOutlet weak var _userTypeTextField: UITextField!
+    let userTypeDelegate = UserTypePickerDelegate()
+    
     @IBOutlet weak var _finishSchoolSelectionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let statePickerView = UIPickerView()
+        statePickerView.delegate = statesSelectionDelegate
+        
+        let schoolTypePickerView = UIPickerView()
+        schoolTypePickerView.delegate = schoolTypeDelegate
+        
+        let schoolPickerView = UIPickerView()
+        schoolPickerView.delegate = schoolSelectionDelegate
+        
+        let userTypePickerView = UIPickerView()
+        userTypePickerView.delegate = userTypeDelegate
+    
+        
+        _stateSelectionTextField.inputView = statePickerView
+        _schoolTypeTextField.inputView = schoolTypePickerView
+        _schoolSelectionTextField.inputView = schoolPickerView
+        _userTypeTextField.inputView = userTypePickerView
         
         //Apply Styling
         let buttonStyling = ButtonStyling();

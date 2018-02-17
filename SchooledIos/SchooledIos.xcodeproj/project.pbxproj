@@ -25,6 +25,7 @@
 		054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */; };
 		054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA272038B50800FD42B1 /* SubjectsViewController.swift */; };
 		054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */; };
+		054FBA3B2038D0E600FD42B1 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA3A2038D0E600FD42B1 /* Delegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSuccessfulViewController.swift; sourceTree = "<group>"; };
 		054FBA272038B50800FD42B1 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
+		054FBA3A2038D0E600FD42B1 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		0531D9C020315CAB007C44BB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				054FBA362038D08D00FD42B1 /* Pickers */,
 				0531D9C120315CCE007C44BB /* ElementStyling */,
 			);
 			path = Utilities;
@@ -110,8 +113,8 @@
 		0531D9CB2031663A007C44BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				054FBA312038BFD700FD42B1 /* Elements */,
 				054FBA2620389BA900FD42B1 /* Home-Page */,
-				054FBA2420389B7200FD42B1 /* Side-Menu */,
 				054FBA2320389B5E00FD42B1 /* Password-Reset */,
 				054FBA2220389B0400FD42B1 /* Login-Signup */,
 			);
@@ -189,6 +192,22 @@
 				054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */,
 			);
 			path = "Leaderboards-Options";
+			sourceTree = "<group>";
+		};
+		054FBA312038BFD700FD42B1 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA2420389B7200FD42B1 /* Side-Menu */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		054FBA362038D08D00FD42B1 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA3A2038D0E600FD42B1 /* Delegates.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +290,7 @@
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
 				054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */,
+				054FBA3B2038D0E600FD42B1 /* Delegates.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
 				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
 				054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */,

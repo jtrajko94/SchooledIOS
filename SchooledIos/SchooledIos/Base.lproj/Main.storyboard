@@ -689,36 +689,79 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-ta-8r6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-gM-IQH">
-                                <rect key="frame" x="123" y="407" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
-                                <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ear-g5-LBB" kind="show" id="KZi-EV-arw"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectyourschool" translatesAutoresizingMaskIntoConstraints="NO" id="fQX-Vf-XgA">
                                 <rect key="frame" x="66" y="104" width="282" height="120"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-f2-erQ">
+                                <rect key="frame" x="66.333333333333314" y="238" width="282" height="260"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nR-az-SOM">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kind of School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6q0-N6-b15">
+                                        <rect key="frame" x="0.0" y="53" width="282" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Your School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-7I-V6t">
+                                        <rect key="frame" x="0.0" y="106" width="282" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Best Describes You" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzm-A8-bD8">
+                                        <rect key="frame" x="0.0" y="159" width="282" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-gM-IQH">
+                                        <rect key="frame" x="0.0" y="212" width="282" height="48"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ear-g5-LBB" kind="show" id="KZi-EV-arw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pqc-gM-IQH" firstAttribute="height" secondItem="6q0-N6-b15" secondAttribute="height" id="8C0-nE-oTa"/>
+                                    <constraint firstItem="Pqc-gM-IQH" firstAttribute="height" secondItem="UaT-7I-V6t" secondAttribute="height" id="U18-wZ-dmk"/>
+                                    <constraint firstItem="Pqc-gM-IQH" firstAttribute="height" secondItem="5nR-az-SOM" secondAttribute="height" id="aSA-TS-ZqE"/>
+                                    <constraint firstItem="Pqc-gM-IQH" firstAttribute="height" secondItem="vzm-A8-bD8" secondAttribute="height" id="dle-S8-Gaw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Lp8-ta-8r6" firstAttribute="leading" secondItem="YLT-V4-yAm" secondAttribute="leading" id="A44-RJ-ENv"/>
+                            <constraint firstItem="rl4-f2-erQ" firstAttribute="centerX" secondItem="YLT-V4-yAm" secondAttribute="centerX" id="Blq-d2-ayt"/>
                             <constraint firstItem="Lp8-ta-8r6" firstAttribute="baseline" secondItem="fQX-Vf-XgA" secondAttribute="firstBaseline" multiplier="7" constant="8" symbolType="layoutAnchor" id="JCd-UW-Up6"/>
+                            <constraint firstItem="rl4-f2-erQ" firstAttribute="centerY" secondItem="YLT-V4-yAm" secondAttribute="centerY" id="TBP-OH-6uI"/>
+                            <constraint firstItem="rl4-f2-erQ" firstAttribute="width" secondItem="fQX-Vf-XgA" secondAttribute="width" id="ZPG-Tu-UTJ"/>
+                            <constraint firstItem="rl4-f2-erQ" firstAttribute="centerX" secondItem="YLT-V4-yAm" secondAttribute="centerX" id="ibE-Gm-OTJ"/>
                             <constraint firstItem="Lp8-ta-8r6" firstAttribute="top" secondItem="YLT-V4-yAm" secondAttribute="top" id="lgW-nu-SH0"/>
                             <constraint firstItem="fQX-Vf-XgA" firstAttribute="centerX" secondItem="YLT-V4-yAm" secondAttribute="centerX" id="q30-cZ-Ymp"/>
                             <constraint firstAttribute="bottom" secondItem="Lp8-ta-8r6" secondAttribute="bottom" id="rTF-Wn-eey"/>
                             <constraint firstAttribute="trailing" secondItem="Lp8-ta-8r6" secondAttribute="trailing" id="v6o-OY-PMz"/>
+                            <constraint firstItem="rl4-f2-erQ" firstAttribute="centerY" secondItem="YLT-V4-yAm" secondAttribute="centerY" id="yhe-eO-KNP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jtp-JP-A92"/>
                     </view>
                     <connections>
                         <outlet property="_finishSchoolSelectionButton" destination="Pqc-gM-IQH" id="XaD-Lb-xgx"/>
+                        <outlet property="_schoolSelectionTextField" destination="UaT-7I-V6t" id="zR5-UV-cfj"/>
+                        <outlet property="_schoolTypeTextField" destination="6q0-N6-b15" id="6Yg-nj-HMc"/>
+                        <outlet property="_stateSelectionTextField" destination="5nR-az-SOM" id="pBO-jH-tbg"/>
+                        <outlet property="_userTypeTextField" destination="vzm-A8-bD8" id="dWL-Pp-XAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y70-z7-6GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
