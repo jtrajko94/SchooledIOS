@@ -14,6 +14,9 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     let schoolTypes = ["Elementary School", "Middle School", "High School"]
     let schools = ["Glenbard East", "Addison Trail"]
     let userTypes = ["Elementary Student", "Middle School Student", "High School Student", "Parent", "Other"]
+    
+    var selectedField = UITextField()
+    var selectedRow = 0
 
     @IBOutlet weak var _stateSelectionTextField: UITextField!
     let statePickerView = UIPickerView()
@@ -31,35 +34,48 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        //Set delegates
         statePickerView.delegate = self
-        statePickerView.dataSource = self
-        
         schoolTypePickerView.delegate = self
-        
         schoolPickerView.delegate = self
-        
         userTypePickerView.delegate = self
     
+        //make toolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
         
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SchoolSelectionViewController.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([spaceButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        //Link the text fields with the UIPickerViews
         _stateSelectionTextField.inputView = statePickerView
+        _stateSelectionTextField.inputAccessoryView = toolBar
         
         _schoolTypeTextField.inputView = schoolTypePickerView
+        _schoolTypeTextField.inputAccessoryView = toolBar
         
         _schoolSelectionTextField.inputView = schoolPickerView
+        _schoolSelectionTextField.inputAccessoryView = toolBar
         
         _userTypeTextField.inputView = userTypePickerView
+        _userTypeTextField.inputAccessoryView = toolBar
         
         //Apply Styling
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _finishSchoolSelectionButton)
     }
     
+    //Picker View Delegate functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView == statePickerView){
             return states.count
@@ -72,23 +88,21 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         }
         return 1
     }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView == statePickerView){
-            _stateSelectionTextField.text = states[row]
-            _stateSelectionTextField.resignFirstResponder()
+            selectedRow = row
+            selectedField = _stateSelectionTextField
         } else if(pickerView == schoolTypePickerView){
-            _schoolTypeTextField.text = schoolTypes[row]
-            _schoolTypeTextField.resignFirstResponder()
+            selectedRow = row
+            selectedField = _schoolTypeTextField
         } else if(pickerView == schoolPickerView){
-            _schoolSelectionTextField.text = schools[row]
-            _schoolSelectionTextField.resignFirstResponder()
+            selectedRow = row
+            selectedField = _schoolSelectionTextField
         } else if(pickerView == userTypePickerView){
-            _userTypeTextField.text = userTypes[row]
-            _userTypeTextField.resignFirstResponder()
+            selectedRow = row
+            selectedField = _userTypeTextField
         }
     }
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == statePickerView){
             return states[row]
@@ -100,6 +114,20 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
             return userTypes[row]
         }
         return "Error"
+    }
+    
+    //Toolbar functions
+    @objc func donePicker() {
+        selectedField.resignFirstResponder()
+        if(selectedField == _stateSelectionTextField){
+            selectedField.text = states[selectedRow]
+        } else if(selectedField == _schoolTypeTextField){
+            selectedField.text = schoolTypes[selectedRow]
+        } else if(selectedField == _schoolSelectionTextField){
+            selectedField.text = schools[selectedRow]
+        } else if(selectedField == _userTypeTextField){
+            selectedField.text = userTypes[selectedRow]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
