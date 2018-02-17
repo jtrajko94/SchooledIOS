@@ -106,19 +106,59 @@
 		0531D9CB2031663A007C44BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				054FBA2620389BA900FD42B1 /* Home-Page */,
+				054FBA2420389B7200FD42B1 /* Side-Menu */,
+				054FBA2320389B5E00FD42B1 /* Password-Reset */,
+				054FBA2220389B0400FD42B1 /* Login-Signup */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		054FBA2220389B0400FD42B1 /* Login-Signup */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */,
 				0508446E2030027300485109 /* ViewController.swift */,
 				0531D9C520316132007C44BB /* LoginViewController.swift */,
 				0531D9C920316462007C44BB /* SignUpViewController.swift */,
-				054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */,
-				054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */,
-				054FBA162034007E00FD42B1 /* HomePageViewController.swift */,
-				054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */,
-				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
+			);
+			path = "Login-Signup";
+			sourceTree = "<group>";
+		};
+		054FBA2320389B5E00FD42B1 /* Password-Reset */ = {
+			isa = PBXGroup;
+			children = (
 				054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */,
 				054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */,
 				054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */,
 			);
-			path = Controllers;
+			path = "Password-Reset";
+			sourceTree = "<group>";
+		};
+		054FBA2420389B7200FD42B1 /* Side-Menu */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA2520389B8400FD42B1 /* Options */,
+				054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */,
+				054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */,
+			);
+			path = "Side-Menu";
+			sourceTree = "<group>";
+		};
+		054FBA2520389B8400FD42B1 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		054FBA2620389BA900FD42B1 /* Home-Page */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA162034007E00FD42B1 /* HomePageViewController.swift */,
+			);
+			path = "Home-Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
