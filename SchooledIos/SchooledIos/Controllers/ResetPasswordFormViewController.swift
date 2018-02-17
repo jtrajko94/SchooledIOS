@@ -10,7 +10,13 @@ import UIKit
 
 class ResetPasswordFormViewController: UIViewController {
 
+    @IBOutlet weak var _resetPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Apply Styling
+        let buttonStyling = ButtonStyling();
+        buttonStyling.defaultStyling(button: _resetPasswordButton)
     }
 }

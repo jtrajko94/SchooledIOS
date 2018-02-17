@@ -10,8 +10,14 @@ import UIKit
 
 class PasswordSuccessfulViewController: UIViewController {
 
+    @IBOutlet weak var _loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Apply Styling
+        let buttonStyling = ButtonStyling();
+        buttonStyling.defaultStyling(button: _loginButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
