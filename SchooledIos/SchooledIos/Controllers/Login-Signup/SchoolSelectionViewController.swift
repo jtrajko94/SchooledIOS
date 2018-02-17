@@ -14,18 +14,20 @@ class SchoolSelectionViewController: UIViewController{
     let statesSelectionDelegate = StatePickerDelegate()
     
     @IBOutlet weak var _schoolTypeTextField: UITextField!
-    let schoolTypeDelegate = SchoolTypePickerDelegate()
     
     @IBOutlet weak var _schoolSelectionTextField: UITextField!
-    let schoolSelectionDelegate = SchoolPickerDelegate()
     
     @IBOutlet weak var _userTypeTextField: UITextField!
-    let userTypeDelegate = UserTypePickerDelegate()
     
     @IBOutlet weak var _finishSchoolSelectionButton: UIButton!
     
     override func viewDidLoad() {
+        let schoolTypeDelegate = SchoolTypePickerDelegate()
+        let schoolSelectionDelegate = SchoolPickerDelegate()
+        let userTypeDelegate = UserTypePickerDelegate()
+        
         super.viewDidLoad()
+
         
         let statePickerView = UIPickerView()
         statePickerView.delegate = statesSelectionDelegate
@@ -41,8 +43,11 @@ class SchoolSelectionViewController: UIViewController{
     
         
         _stateSelectionTextField.inputView = statePickerView
+        
         _schoolTypeTextField.inputView = schoolTypePickerView
+        
         _schoolSelectionTextField.inputView = schoolPickerView
+        
         _userTypeTextField.inputView = userTypePickerView
         
         //Apply Styling

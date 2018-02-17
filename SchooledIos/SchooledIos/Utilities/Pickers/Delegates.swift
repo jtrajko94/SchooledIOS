@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class StatePickerDelegate: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-    let states = ["Alabama", "Georgia", "Illinois", "Wyoming"]
+    var states = ["Alabama", "Georgia", "Illinois", "Wyoming"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
