@@ -21,6 +21,8 @@
 		054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */; };
 		054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */; };
 		054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */; };
+		054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */; };
+		054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
 		054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordFormViewController.swift; sourceTree = "<group>"; };
+		054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSuccessfulViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				054FBA18203528B600FD42B1 /* SideMenuContainerViewController.swift */,
 				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
 				054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */,
+				054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */,
+				054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,9 +199,11 @@
 				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
+				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
 				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
 				0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */,
+				054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
 			);
