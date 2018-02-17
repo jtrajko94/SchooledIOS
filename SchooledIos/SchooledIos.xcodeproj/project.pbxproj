@@ -23,6 +23,8 @@
 		054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */; };
 		054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */; };
 		054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */; };
+		054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA272038B50800FD42B1 /* SubjectsViewController.swift */; };
+		054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		054FBA1C2036C00D00FD42B1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		054FBA1E2037C40200FD42B1 /* ResetPasswordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordFormViewController.swift; sourceTree = "<group>"; };
 		054FBA202037C50F00FD42B1 /* PasswordSuccessfulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSuccessfulViewController.swift; sourceTree = "<group>"; };
+		054FBA272038B50800FD42B1 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
+		054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +152,9 @@
 		054FBA2520389B8400FD42B1 /* Options */ = {
 			isa = PBXGroup;
 			children = (
-				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
+				054FBA2D2038B79000FD42B1 /* Leaderboards-Options */,
+				054FBA2A2038B52D00FD42B1 /* Settings-Options */,
+				054FBA292038B50F00FD42B1 /* Games-Options */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -159,6 +165,30 @@
 				054FBA162034007E00FD42B1 /* HomePageViewController.swift */,
 			);
 			path = "Home-Page";
+			sourceTree = "<group>";
+		};
+		054FBA292038B50F00FD42B1 /* Games-Options */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA272038B50800FD42B1 /* SubjectsViewController.swift */,
+			);
+			path = "Games-Options";
+			sourceTree = "<group>";
+		};
+		054FBA2A2038B52D00FD42B1 /* Settings-Options */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
+			);
+			path = "Settings-Options";
+			sourceTree = "<group>";
+		};
+		054FBA2D2038B79000FD42B1 /* Leaderboards-Options */ = {
+			isa = PBXGroup;
+			children = (
+				054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */,
+			);
+			path = "Leaderboards-Options";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +270,10 @@
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
+				054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
 				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
+				054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */,
 				0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */,
 				054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,

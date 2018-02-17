@@ -20,9 +20,19 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showGames), name: NSNotification.Name("ShowGames"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showLeaderboards), name: NSNotification.Name("ShowLeaderboards"), object: nil)
     }
     
     @objc func showSettings(){
         performSegue(withIdentifier: "ShowSettings", sender: nil)
+    }
+    
+    @objc func showGames(){
+        performSegue(withIdentifier: "ShowGames", sender: nil)
+    }
+    
+    @objc func showLeaderboards(){
+        performSegue(withIdentifier: "ShowLeaderboards", sender: nil)
     }
 }
