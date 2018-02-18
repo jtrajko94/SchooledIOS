@@ -42,30 +42,14 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         userTypePickerView.delegate = self
     
         //make toolbar
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-        toolBar.sizeToFit()
+        let toolBar = setUpToolbar()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SchoolSelectionViewController.donePicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        //Setup textfields
+        setUpPickerTextFields(_stateSelectionTextField, statePickerView, toolBar)
+        setUpPickerTextFields(_schoolTypeTextField, schoolTypePickerView, toolBar)
+        setUpPickerTextFields(_schoolSelectionTextField, schoolPickerView, toolBar)
+        setUpPickerTextFields(_userTypeTextField, userTypePickerView, toolBar)
         
-        toolBar.setItems([spaceButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
-        //Link the text fields with the UIPickerViews
-        _stateSelectionTextField.inputView = statePickerView
-        _stateSelectionTextField.inputAccessoryView = toolBar
-        
-        _schoolTypeTextField.inputView = schoolTypePickerView
-        _schoolTypeTextField.inputAccessoryView = toolBar
-        
-        _schoolSelectionTextField.inputView = schoolPickerView
-        _schoolSelectionTextField.inputAccessoryView = toolBar
-        
-        _userTypeTextField.inputView = userTypePickerView
-        _userTypeTextField.inputAccessoryView = toolBar
         
         //Apply Styling
         let buttonStyling = ButtonStyling();
@@ -128,6 +112,33 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         } else if(selectedField == _userTypeTextField){
             selectedField.text = userTypes[selectedRow]
         }
+    }
+    
+    //Set default selected text field
+    @objc func setBaseTextFieldOnClick(textField: UITextField) {
+        selectedField = textField
+    }
+    
+    func setUpPickerTextFields(_ textField: UITextField, _ picker: UIPickerView, _ toolBar: UIToolbar){
+        textField.addTarget(self, action: #selector(setBaseTextFieldOnClick), for: UIControlEvents.touchDown)
+        textField.inputView = picker
+        textField.inputAccessoryView = toolBar
+    }
+    
+    func setUpToolbar() -> UIToolbar{
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SchoolSelectionViewController.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([spaceButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        return toolBar
     }
     
     override func viewWillAppear(_ animated: Bool) {
