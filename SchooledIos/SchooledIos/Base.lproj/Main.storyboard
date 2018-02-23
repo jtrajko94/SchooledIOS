@@ -384,7 +384,9 @@
                         <viewLayoutGuide key="safeArea" id="922-up-DVH"/>
                     </view>
                     <connections>
+                        <outlet property="_emailTextField" destination="P65-DC-jpo" id="R0m-Pb-P2f"/>
                         <outlet property="_loginButton" destination="F3u-NQ-KhP" id="1MM-W0-rrv"/>
+                        <outlet property="_passwordTextField" destination="gcg-s9-Kwg" id="yK1-pP-SSU"/>
                         <outlet property="_registerButton" destination="1id-nr-07X" id="OhQ-H7-9JU"/>
                     </connections>
                 </viewController>
@@ -450,6 +452,7 @@
                         <viewLayoutGuide key="safeArea" id="tPg-vV-Mnk"/>
                     </view>
                     <connections>
+                        <outlet property="_emailTextField" destination="kNn-d5-zct" id="cbo-NG-vTE"/>
                         <outlet property="_resetPassSubmitButton" destination="TrY-Zn-cSJ" id="Vyz-2e-Mlg"/>
                     </connections>
                 </viewController>
@@ -527,7 +530,10 @@
                         <viewLayoutGuide key="safeArea" id="jxc-xR-IT0"/>
                     </view>
                     <connections>
+                        <outlet property="_confirmPasswordTextField" destination="pPD-Is-Mdr" id="zWs-ao-tbh"/>
+                        <outlet property="_passwordTextField" destination="s1A-Ru-G0n" id="D1Q-O1-UMK"/>
                         <outlet property="_resetPasswordButton" destination="vr6-TD-Iks" id="3lB-j0-nkc"/>
+                        <outlet property="_temporaryPasswordTextField" destination="ebF-Lv-wYg" id="7rk-eB-ytd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPk-uM-1z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -638,7 +644,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcR-xa-Rf4">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcR-xa-Rf4">
                                                 <rect key="frame" x="0.0" y="57" width="305" height="48"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -686,6 +692,11 @@
                         <viewLayoutGuide key="safeArea" id="sbj-LH-XnJ"/>
                     </view>
                     <connections>
+                        <outlet property="_eMailTextField" destination="MY2-lQ-feP" id="kzw-7V-ZtU"/>
+                        <outlet property="_firstNameTextField" destination="BSg-5c-GeX" id="ULl-VG-kNO"/>
+                        <outlet property="_lastNameTextField" destination="4GE-tf-RgM" id="OoM-5V-2LR"/>
+                        <outlet property="_passwordConfirmTextField" destination="91b-tD-gC0" id="ztQ-2a-hNE"/>
+                        <outlet property="_passwordTextField" destination="XcR-xa-Rf4" id="e9b-sb-3wd"/>
                         <outlet property="_signUpButton" destination="p6J-ez-PgS" id="qIw-2p-Wbd"/>
                     </connections>
                 </viewController>
