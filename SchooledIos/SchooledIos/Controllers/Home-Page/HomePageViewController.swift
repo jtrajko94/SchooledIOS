@@ -46,8 +46,8 @@ class HomePageViewController: UIViewController {
         let labelStyling = LabelStyling();
         labelStyling.defaultStyling(label: _raffelTicketsLabel, fontSize: 17)
         labelStyling.defaultStyling(label: _schoolRankLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 25)
-        labelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 25)
+        labelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 35)
+        labelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 35)
         labelStyling.defaultStyling(label: _personalPrizeLabel, fontSize: 17)
         labelStyling.defaultStyling(label: _schoolPrizeLabel, fontSize: 17)
         labelStyling.defaultStyling(label: _personalPrizeDaysLabel, fontSize: 17)
