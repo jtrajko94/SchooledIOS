@@ -11,19 +11,17 @@ import UIKit
 
 class LabelStyling {
     
-    //Default White Text and Shadow Styling
+    //Default White Text and Outlining
     func defaultStyling(label: UILabel, fontSize: CGFloat) {
-        label.textColor = UIColor.white.withAlphaComponent(1)
-        label.font = UIFont(name: label.font.fontName, size: fontSize);
-        /*
-        let str = NSAttributedString(string: label.text!, attributes: [
-            NSAttributedStringKey.foregroundColor : UIColor.black,
+
+        let attributedString = NSAttributedString(string: label.text!, attributes: [
             NSAttributedStringKey.strokeColor : UIColor.black,
-            NSAttributedStringKey.strokeWidth : 2,
-            
+            NSAttributedStringKey.foregroundColor : UIColor.white,
+            NSAttributedStringKey.strokeWidth : NSNumber(value: -2.0),
+            NSAttributedStringKey.font : UIFont(name: "ChalkboardSE-Bold", size: fontSize)!
             ])
-        */
         
-        //label.attributedText = str
+        label.attributedText = attributedString
+        label.font = UIFont(name: label.font.fontName, size: fontSize);
     }
 }
