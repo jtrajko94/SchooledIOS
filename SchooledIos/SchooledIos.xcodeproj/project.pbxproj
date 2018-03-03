@@ -29,7 +29,6 @@
 		054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA272038B50800FD42B1 /* SubjectsViewController.swift */; };
 		054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */; };
 		054FBA422039E3AA00FD42B1 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */; };
-		054FBA45203A3BD700FD42B1 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA44203A3BD700FD42B1 /* QuestionsViewController.swift */; };
 		054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		054FBA272038B50800FD42B1 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 		054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
-		054FBA44203A3BD700FD42B1 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				054FBA272038B50800FD42B1 /* SubjectsViewController.swift */,
-				054FBA44203A3BD700FD42B1 /* QuestionsViewController.swift */,
 				054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */,
 			);
 			path = "Games-Options";
@@ -332,7 +329,6 @@
 				054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
-				054FBA45203A3BD700FD42B1 /* QuestionsViewController.swift in Sources */,
 				054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
