@@ -233,31 +233,37 @@
                                 <rect key="frame" x="35" y="82.5" width="305" height="88"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJp-pG-fJR">
-                                <rect key="frame" x="28.5" y="203" width="318" height="261"/>
+                                <rect key="frame" x="24.5" y="203" width="326" height="261"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-sl-BHD">
-                                        <rect key="frame" x="0.0" y="0.0" width="318" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="55"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                         <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                         <state key="normal" title="CHANGE PASSWORD">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ct3-pC-GyC" kind="show" id="xze-8P-0Mr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crS-du-GGb">
-                                        <rect key="frame" x="0.0" y="65" width="318" height="55"/>
+                                        <rect key="frame" x="0.0" y="65" width="326" height="55"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                         <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                         <state key="normal" title="CHANGE SCHOOL">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="NJB-nz-70V" kind="show" id="avQ-qc-Imd"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="93a-dp-ifo">
-                                        <rect key="frame" x="0.0" y="130" width="318" height="131"/>
+                                        <rect key="frame" x="0.0" y="130" width="326" height="131"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE DIFFICULTY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bv-jS-NVN">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="326" height="43"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -265,19 +271,19 @@
                                                 <size key="shadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L27-Be-vud">
-                                                <rect key="frame" x="0.0" y="48" width="318" height="83"/>
+                                                <rect key="frame" x="0.0" y="48" width="326" height="83"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-ui-utM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="47"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="47"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-Dd-Bpw">
-                                                                <rect key="frame" x="-2" y="0.0" width="322" height="31"/>
+                                                                <rect key="frame" x="-2" y="0.0" width="330" height="31"/>
                                                             </slider>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gX-XW-Uag">
-                                                                <rect key="frame" x="0.0" y="18" width="318" height="29"/>
+                                                                <rect key="frame" x="0.0" y="18" width="326" height="29"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-N6-KuQ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="29"/>
                                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -285,7 +291,7 @@
                                                                         <size key="shadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idm-P8-KyA">
-                                                                        <rect key="frame" x="159" y="0.0" width="159" height="29"/>
+                                                                        <rect key="frame" x="163" y="0.0" width="163" height="29"/>
                                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -302,7 +308,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-Zl-cgj">
-                                                        <rect key="frame" x="0.0" y="47" width="318" height="36"/>
+                                                        <rect key="frame" x="0.0" y="47" width="326" height="36"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1373,6 +1379,178 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqn-nc-Qgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1384" y="105"/>
+        </scene>
+        <!--Settings Change Password View Controller-->
+        <scene sceneID="gbO-TI-biN">
+            <objects>
+                <viewController id="ct3-pC-GyC" customClass="SettingsChangePasswordViewController" customModule="SchooledIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TYU-RH-sVk" customClass="reset">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="awL-3a-6Td">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-dM-Xep">
+                                <rect key="frame" x="41.5" y="299.5" width="292" height="207"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-Vi-FQQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxS-77-HRR">
+                                        <rect key="frame" x="0.0" y="53" width="292" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfm-bX-5zZ">
+                                        <rect key="frame" x="0.0" y="106" width="292" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE7-qr-rPq">
+                                        <rect key="frame" x="0.0" y="159" width="292" height="48"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
+                                        <state key="normal" title="UPDATE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qfm-bX-5zZ" firstAttribute="height" secondItem="xxS-77-HRR" secondAttribute="height" id="1Mc-sD-fOs"/>
+                                    <constraint firstItem="xxS-77-HRR" firstAttribute="height" secondItem="iqq-Vi-FQQ" secondAttribute="height" id="akR-rC-33f"/>
+                                    <constraint firstItem="cE7-qr-rPq" firstAttribute="height" secondItem="qfm-bX-5zZ" secondAttribute="height" id="mkp-v0-LTa"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resetPasswordViaEmail" translatesAutoresizingMaskIntoConstraints="NO" id="dso-WC-KIs">
+                                <rect key="frame" x="41.5" y="94" width="292" height="98"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="leading" secondItem="Lx0-3c-Mht" secondAttribute="leading" id="4D9-dz-wc6"/>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="baseline" secondItem="dso-WC-KIs" secondAttribute="firstBaseline" multiplier="7" constant="8" symbolType="layoutAnchor" id="F78-Vb-xmL"/>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="bottom" secondItem="Lx0-3c-Mht" secondAttribute="bottom" id="HdJ-LD-5lQ"/>
+                            <constraint firstItem="xfH-dM-Xep" firstAttribute="centerX" secondItem="TYU-RH-sVk" secondAttribute="centerX" id="ilL-jK-a4O"/>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="trailing" secondItem="Lx0-3c-Mht" secondAttribute="trailing" id="qa3-R7-BKE"/>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="top" secondItem="TYU-RH-sVk" secondAttribute="top" id="qaG-FG-rkS"/>
+                            <constraint firstItem="awL-3a-6Td" firstAttribute="baseline" secondItem="xfH-dM-Xep" secondAttribute="firstBaseline" multiplier="2" constant="11" symbolType="layoutAnchor" id="sSx-Np-TlB"/>
+                            <constraint firstItem="xfH-dM-Xep" firstAttribute="width" secondItem="dso-WC-KIs" secondAttribute="width" id="tZU-4e-6MV"/>
+                            <constraint firstItem="dso-WC-KIs" firstAttribute="centerX" secondItem="TYU-RH-sVk" secondAttribute="centerX" id="x0b-6p-iOA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lx0-3c-Mht"/>
+                    </view>
+                    <connections>
+                        <outlet property="_confirmPasswordTextField" destination="qfm-bX-5zZ" id="21r-7F-7rz"/>
+                        <outlet property="_currentPasswordTextField" destination="iqq-Vi-FQQ" id="zBJ-AJ-4oA"/>
+                        <outlet property="_newPasswordTextField" destination="xxS-77-HRR" id="OVV-sD-V5L"/>
+                        <outlet property="_updatePasswordButton" destination="cE7-qr-rPq" id="hq9-b7-2IF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCt-l0-u0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6934" y="-1730"/>
+        </scene>
+        <!--Settings School Selection View Controller-->
+        <scene sceneID="8S5-PY-rh2">
+            <objects>
+                <viewController id="NJB-nz-70V" customClass="SettingsSchoolSelectionViewController" customModule="SchooledIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Gb-V6-EE6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-ok-mWg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectyourschool" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-53-Zwu">
+                                <rect key="frame" x="56.5" y="94" width="262" height="114"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Po6-y9-Xv7">
+                                <rect key="frame" x="56.5" y="299.5" width="262" height="207"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-8l-ZRE" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="selectorDownArrows"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kind of School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64x-QB-KYp" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53" width="262" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="selectorDownArrows"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Your School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-4k-se3" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="262" height="48"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="selectorDownArrows"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-6y-ia9">
+                                        <rect key="frame" x="0.0" y="159" width="262" height="48"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
+                                        <state key="normal" title="UPDATE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oWd-6y-ia9" firstAttribute="height" secondItem="IiT-8l-ZRE" secondAttribute="height" id="566-we-5DV"/>
+                                    <constraint firstItem="oWd-6y-ia9" firstAttribute="height" secondItem="64x-QB-KYp" secondAttribute="height" id="R3F-RN-ZVl"/>
+                                    <constraint firstItem="oWd-6y-ia9" firstAttribute="height" secondItem="Nkc-4k-se3" secondAttribute="height" id="f5Z-mk-TlF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bYK-53-Zwu" firstAttribute="centerX" secondItem="0Gb-V6-EE6" secondAttribute="centerX" id="5eF-UB-eul"/>
+                            <constraint firstItem="ExT-ok-mWg" firstAttribute="leading" secondItem="0Gb-V6-EE6" secondAttribute="leading" id="A64-yY-aXV"/>
+                            <constraint firstItem="ExT-ok-mWg" firstAttribute="baseline" secondItem="Po6-y9-Xv7" secondAttribute="firstBaseline" multiplier="2" constant="11" symbolType="layoutAnchor" id="Hgh-Rh-HNJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ExT-ok-mWg" secondAttribute="trailing" id="MAX-3f-dSx"/>
+                            <constraint firstItem="Po6-y9-Xv7" firstAttribute="centerX" secondItem="0Gb-V6-EE6" secondAttribute="centerX" id="der-la-7aK"/>
+                            <constraint firstItem="Po6-y9-Xv7" firstAttribute="width" secondItem="bYK-53-Zwu" secondAttribute="width" id="egM-ia-nlL"/>
+                            <constraint firstItem="ExT-ok-mWg" firstAttribute="baseline" secondItem="bYK-53-Zwu" secondAttribute="firstBaseline" multiplier="7" constant="8" symbolType="layoutAnchor" id="ia5-Rf-TtL"/>
+                            <constraint firstAttribute="bottom" secondItem="ExT-ok-mWg" secondAttribute="bottom" id="lpd-x0-Fsa"/>
+                            <constraint firstItem="ExT-ok-mWg" firstAttribute="top" secondItem="0Gb-V6-EE6" secondAttribute="top" id="pbf-S5-dif"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R9s-Ax-xYE"/>
+                    </view>
+                    <connections>
+                        <outlet property="_finishSchoolSelectionButton" destination="oWd-6y-ia9" id="oTs-qk-lh3"/>
+                        <outlet property="_schoolSelectionTextField" destination="Nkc-4k-se3" id="1U9-qu-NtM"/>
+                        <outlet property="_schoolTypeTextField" destination="64x-QB-KYp" id="HWi-rV-cVC"/>
+                        <outlet property="_stateSelectionTextField" destination="IiT-8l-ZRE" id="kPK-js-AY1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNc-ea-hnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6934" y="-2501"/>
         </scene>
     </scenes>
     <resources>

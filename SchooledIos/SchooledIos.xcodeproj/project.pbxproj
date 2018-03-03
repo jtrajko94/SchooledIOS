@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0503285220479E2500010489 /* LabelStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503285120479E2500010489 /* LabelStyling.swift */; };
+		05032857204B1F6300010489 /* SettingsChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05032856204B1F6300010489 /* SettingsChangePasswordViewController.swift */; };
+		0503285C204B214000010489 /* SettingsSchoolSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */; };
 		0508446D2030027300485109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508446C2030027300485109 /* AppDelegate.swift */; };
 		0508446F2030027300485109 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508446E2030027300485109 /* ViewController.swift */; };
 		050844722030027300485109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050844702030027300485109 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		0503285120479E2500010489 /* LabelStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyling.swift; sourceTree = "<group>"; };
+		05032856204B1F6300010489 /* SettingsChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangePasswordViewController.swift; sourceTree = "<group>"; };
+		0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSchoolSelectionViewController.swift; sourceTree = "<group>"; };
 		050844692030027300485109 /* SchooledIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchooledIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0508446C2030027300485109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0508446E2030027300485109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05032853204B1D4900010489 /* Reset-Password */ = {
+			isa = PBXGroup;
+			children = (
+				05032856204B1F6300010489 /* SettingsChangePasswordViewController.swift */,
+			);
+			path = "Reset-Password";
+			sourceTree = "<group>";
+		};
+		0503285A204B211800010489 /* School-Select */ = {
+			isa = PBXGroup;
+			children = (
+				0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */,
+			);
+			path = "School-Select";
+			sourceTree = "<group>";
+		};
 		050844602030027300485109 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +210,8 @@
 		054FBA2A2038B52D00FD42B1 /* Settings-Options */ = {
 			isa = PBXGroup;
 			children = (
+				0503285A204B211800010489 /* School-Select */,
+				05032853204B1D4900010489 /* Reset-Password */,
 				054FBA1A20352E7E00FD42B1 /* SettingsViewController.swift */,
 			);
 			path = "Settings-Options";
@@ -293,12 +315,14 @@
 			files = (
 				054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */,
 				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
+				05032857204B1F6300010489 /* SettingsChangePasswordViewController.swift in Sources */,
 				0503285220479E2500010489 /* LabelStyling.swift in Sources */,
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
 				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
+				0503285C204B214000010489 /* SettingsSchoolSelectionViewController.swift in Sources */,
 				054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
 				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
