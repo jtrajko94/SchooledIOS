@@ -1142,6 +1142,9 @@
                                         <state key="normal" title="Quick Play">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="RNH-Vt-YUU" kind="show" id="1rb-du-lD7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCH-mO-q4h">
                                         <rect key="frame" x="157.5" y="0.0" width="147.5" height="48"/>
@@ -1149,6 +1152,9 @@
                                         <state key="normal" title="Play">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0s3-G9-8ks" kind="show" id="Ckf-u9-Q7F"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1209,7 +1215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNv-KA-B6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4212" y="-818.14092953523243"/>
+            <point key="canvasLocation" x="4252" y="-818"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0Ab-ha-KQN">
@@ -1242,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUK-AW-vqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5734.7826086956529" y="106.79347826086958"/>
+            <point key="canvasLocation" x="4212" y="145"/>
         </scene>
         <!--Subjects View Controller-->
         <scene sceneID="vBN-uw-Uez">
@@ -1272,9 +1278,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="101" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIz-81-dBs">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIz-81-dBs">
                                                     <rect key="frame" x="8" y="8" width="85" height="83"/>
-                                                    <state key="normal" backgroundImage="button:xIz-81-dBs:backgroundImage"/>
+                                                    <state key="normal" backgroundImage="button:xIz-81-dBs:backgroundImage">
+                                                        <color key="titleColor" red="0.46274509803921571" green="0.80392156862745101" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -1294,14 +1302,6 @@
                                     <outlet property="delegate" destination="0s3-G9-8ks" id="vKG-O6-UGA"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-SH-wi7">
-                                <rect key="frame" x="313" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="RNH-Vt-YUU" kind="show" identifier="gameSelectionSegue" id="cfh-Ds-DAj"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hax-70-P97">
                                 <rect key="frame" x="5" y="74" width="365" height="128"/>
                                 <subviews>
@@ -1395,11 +1395,12 @@
                     </view>
                     <connections>
                         <outlet property="_coursesCollectionView" destination="Fg9-rs-sjc" id="hVt-2V-9dD"/>
+                        <segue destination="RNH-Vt-YUU" kind="show" identifier="gameSelectionSegue" id="cMe-kG-7zC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-Gu-TtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5733.6000000000004" y="-818.14092953523243"/>
+            <point key="canvasLocation" x="6254" y="-818"/>
         </scene>
         <!--Game Selection View Controller-->
         <scene sceneID="i9o-I8-fjd">
@@ -1409,7 +1410,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="Usk-Xu-Ljx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Usk-Xu-Ljx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-8C-YtF">
@@ -1432,7 +1433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mc9-F2-IbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6767" y="-818"/>
+            <point key="canvasLocation" x="6214" y="-36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YQp-YB-Zua">
@@ -1858,6 +1859,8 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
         <image name="ticket" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cMe-kG-7zC"/>
+        <segue reference="I7z-8g-rgD"/>
         <segue reference="OFo-OU-Tgj"/>
     </inferredMetricsTieBreakers>
 </document>
