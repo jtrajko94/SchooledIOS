@@ -10,24 +10,48 @@ import UIKit
 
 class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
     
-    let items = ["0", "1", "2"]
+    @IBOutlet weak var _coursesCollectionView: UICollectionView!
+    //These are the subjects. Initially loaded, get from SQL
+    let subjects = ["Math", "Science", "English"]
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+    //These are loaded after picking a subject, get from SQL
+    let courses = ["Back", "Algebra", "ICA", "Geometry", "Calculus"]
+    
+    //use this if a subject has been picked
+    var subject = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if(subject != ""){
+            return courses.count
+        }
+        return subjects.count
+    }
+    
+    //Change button based on the subject selected. The Subject titles should be the subject text for the courses, that you use to query in SQL
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CoursesCollectionViewCell
-        cell._cellButton.setTitle(items[indexPath.item], for: .normal)
+        if(subject != ""){
+            cell._cellButton.setTitle(courses[indexPath.item], for: .normal)
+            cell._cellButton.setImage(UIImage(named: "present"), for: UIControlState.normal)
+        } else {
+            cell._cellButton.setTitle(subjects[indexPath.item], for: .normal)
+            cell._cellButton.setImage(UIImage(named: "prize"), for: UIControlState.normal)
+        }
         
+        cell._cellButton.addTarget(self, action: #selector(cellButtonClicked), for: UIControlEvents.touchUpInside)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-    }
+    @IBAction func cellButtonClicked(sender: AnyObject) -> Void {
+        guard let button = sender as? UIButton else {
+            return
+        }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        subject = button.title(for: .normal)!
+        _coursesCollectionView.reloadData()
     }
 }
