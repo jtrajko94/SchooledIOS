@@ -10,21 +10,13 @@ import UIKit
 
 class GameSelectionViewController: UIViewController {
 
-     var courseId: Int = 0
+    //This will be updated on load to the course selected
+    var courseId: Int = 0
+    var difficulty: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(courseId)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "gameSelectionSegue"){
-            guard let button = sender as? UIButton else {
-                return
-            }
-            courseId = button.tag
-        }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 }

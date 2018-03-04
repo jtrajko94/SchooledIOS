@@ -20,6 +20,7 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     //use this if a subject has been picked
     var subjectSelected = 0
+    let difficulty = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,17 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
             _coursesCollectionView.reloadData()
         }else{
             performSegue(withIdentifier: "gameSelectionSegue", sender: button)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if(segue.identifier == "gameSelectionSegue"){
+            guard let button = sender as? UIButton else {
+                return
+            }
+            let destinationVC = segue.destination as! GameSelectionViewController
+            destinationVC.courseId = button.tag
+            destinationVC.difficulty = difficulty
         }
     }
 }
