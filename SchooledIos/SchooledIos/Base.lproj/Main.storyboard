@@ -234,10 +234,10 @@
                                 <rect key="frame" x="35" y="82.5" width="305" height="88"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJp-pG-fJR">
-                                <rect key="frame" x="-5.5" y="203" width="386" height="261"/>
+                                <rect key="frame" x="-7.5" y="203" width="390" height="261"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-sl-BHD">
-                                        <rect key="frame" x="0.0" y="0.0" width="386" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="55"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                         <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                         <state key="normal" title="CHANGE PASSWORD">
@@ -249,7 +249,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crS-du-GGb">
-                                        <rect key="frame" x="0.0" y="65" width="386" height="55"/>
+                                        <rect key="frame" x="0.0" y="65" width="390" height="55"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                         <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                         <state key="normal" title="CHANGE SCHOOL">
@@ -261,10 +261,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="93a-dp-ifo">
-                                        <rect key="frame" x="0.0" y="130" width="386" height="131"/>
+                                        <rect key="frame" x="0.0" y="130" width="390" height="131"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE DIFFICULTY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bv-jS-NVN">
-                                                <rect key="frame" x="0.0" y="0.0" width="386" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="43"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -272,19 +272,19 @@
                                                 <size key="shadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L27-Be-vud">
-                                                <rect key="frame" x="0.0" y="48" width="386" height="83"/>
+                                                <rect key="frame" x="0.0" y="48" width="390" height="83"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-ui-utM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="386" height="47"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="47"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-Dd-Bpw">
-                                                                <rect key="frame" x="-2" y="0.0" width="390" height="31"/>
+                                                                <rect key="frame" x="-2" y="0.0" width="394" height="31"/>
                                                             </slider>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gX-XW-Uag">
-                                                                <rect key="frame" x="0.0" y="18" width="386" height="29"/>
+                                                                <rect key="frame" x="0.0" y="18" width="390" height="29"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-N6-KuQ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="193" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="195" height="29"/>
                                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                                                                         <size key="shadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harder" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idm-P8-KyA">
-                                                                        <rect key="frame" x="193" y="0.0" width="193" height="29"/>
+                                                                        <rect key="frame" x="195" y="0.0" width="195" height="29"/>
                                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -309,7 +309,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-Zl-cgj">
-                                                        <rect key="frame" x="0.0" y="47" width="386" height="36"/>
+                                                        <rect key="frame" x="0.0" y="47" width="390" height="36"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1413,18 +1413,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Usk-Xu-Ljx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-8C-YtF">
-                                <rect key="frame" x="127" y="323" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJG-rn-DdG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" id="dkx-ig-cg3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dkx-ig-cg3" id="8q2-um-d9Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RNH-Vt-YUU" id="Hr9-03-e5u"/>
+                                    <outlet property="delegate" destination="RNH-Vt-YUU" id="77B-HS-gVg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EJG-rn-DdG" firstAttribute="top" secondItem="JtZ-Em-f4z" secondAttribute="top" id="4cJ-Ao-oHo"/>
                             <constraint firstItem="Usk-Xu-Ljx" firstAttribute="leading" secondItem="cGY-rd-Kdg" secondAttribute="leading" id="76b-kf-Mr6"/>
                             <constraint firstAttribute="bottom" secondItem="Usk-Xu-Ljx" secondAttribute="bottom" id="Bhk-5b-zO1"/>
+                            <constraint firstItem="JtZ-Em-f4z" firstAttribute="bottom" secondItem="EJG-rn-DdG" secondAttribute="bottom" id="Egh-dM-0hH"/>
+                            <constraint firstItem="JtZ-Em-f4z" firstAttribute="trailing" secondItem="EJG-rn-DdG" secondAttribute="trailing" id="dwW-R2-Z0g"/>
+                            <constraint firstItem="EJG-rn-DdG" firstAttribute="leading" secondItem="JtZ-Em-f4z" secondAttribute="leading" id="uGY-UK-Lnb"/>
                             <constraint firstAttribute="trailing" secondItem="Usk-Xu-Ljx" secondAttribute="trailing" id="xJB-j1-gB8"/>
                             <constraint firstItem="Usk-Xu-Ljx" firstAttribute="top" secondItem="cGY-rd-Kdg" secondAttribute="top" id="y2R-jr-R0B"/>
                         </constraints>
