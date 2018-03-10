@@ -11,6 +11,9 @@
 		05032857204B1F6300010489 /* SettingsChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05032856204B1F6300010489 /* SettingsChangePasswordViewController.swift */; };
 		0503285C204B214000010489 /* SettingsSchoolSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */; };
 		0503285E204BC96B00010489 /* CoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503285D204BC96B00010489 /* CoursesCollectionViewCell.swift */; };
+		050328632054745A00010489 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050328622054745A00010489 /* BlogViewController.swift */; };
+		050328672054756000010489 /* CompetitionMenuSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050328662054756000010489 /* CompetitionMenuSelectViewController.swift */; };
+		05032869205475EB00010489 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05032868205475EB00010489 /* HelpViewController.swift */; };
 		0508446D2030027300485109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508446C2030027300485109 /* AppDelegate.swift */; };
 		0508446F2030027300485109 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508446E2030027300485109 /* ViewController.swift */; };
 		050844722030027300485109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050844702030027300485109 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		05032856204B1F6300010489 /* SettingsChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangePasswordViewController.swift; sourceTree = "<group>"; };
 		0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSchoolSelectionViewController.swift; sourceTree = "<group>"; };
 		0503285D204BC96B00010489 /* CoursesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionViewCell.swift; sourceTree = "<group>"; };
+		050328622054745A00010489 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		050328662054756000010489 /* CompetitionMenuSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionMenuSelectViewController.swift; sourceTree = "<group>"; };
+		05032868205475EB00010489 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		050844692030027300485109 /* SchooledIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchooledIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0508446C2030027300485109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0508446E2030027300485109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,30 @@
 				0503285B204B214000010489 /* SettingsSchoolSelectionViewController.swift */,
 			);
 			path = "School-Select";
+			sourceTree = "<group>";
+		};
+		0503285F2054739F00010489 /* Competitions-Options */ = {
+			isa = PBXGroup;
+			children = (
+				050328662054756000010489 /* CompetitionMenuSelectViewController.swift */,
+			);
+			path = "Competitions-Options";
+			sourceTree = "<group>";
+		};
+		05032860205473D900010489 /* LatestNews-Options */ = {
+			isa = PBXGroup;
+			children = (
+				050328622054745A00010489 /* BlogViewController.swift */,
+			);
+			path = "LatestNews-Options";
+			sourceTree = "<group>";
+		};
+		05032861205473ED00010489 /* Help-Options */ = {
+			isa = PBXGroup;
+			children = (
+				05032868205475EB00010489 /* HelpViewController.swift */,
+			);
+			path = "Help-Options";
 			sourceTree = "<group>";
 		};
 		050844602030027300485109 = {
@@ -182,6 +212,9 @@
 		054FBA2520389B8400FD42B1 /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				05032861205473ED00010489 /* Help-Options */,
+				05032860205473D900010489 /* LatestNews-Options */,
+				0503285F2054739F00010489 /* Competitions-Options */,
 				054FBA2D2038B79000FD42B1 /* Leaderboards-Options */,
 				054FBA2A2038B52D00FD42B1 /* Settings-Options */,
 				054FBA292038B50F00FD42B1 /* Games-Options */,
@@ -315,6 +348,7 @@
 			files = (
 				054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */,
 				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
+				050328632054745A00010489 /* BlogViewController.swift in Sources */,
 				05032857204B1F6300010489 /* SettingsChangePasswordViewController.swift in Sources */,
 				0503285E204BC96B00010489 /* CoursesCollectionViewCell.swift in Sources */,
 				0503285220479E2500010489 /* LabelStyling.swift in Sources */,
@@ -331,8 +365,10 @@
 				054FBA422039E3AA00FD42B1 /* DesignableTextField.swift in Sources */,
 				0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */,
 				054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */,
+				05032869205475EB00010489 /* HelpViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
+				050328672054756000010489 /* CompetitionMenuSelectViewController.swift in Sources */,
 				054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
