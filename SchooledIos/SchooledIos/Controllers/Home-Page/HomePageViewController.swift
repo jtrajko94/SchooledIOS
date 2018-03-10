@@ -48,6 +48,9 @@ class HomePageViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showGames), name: NSNotification.Name("ShowGames"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showLeaderboards), name: NSNotification.Name("ShowLeaderboards"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showCompetitions), name: NSNotification.Name("ShowCompetitions"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showBlogs), name: NSNotification.Name("ShowBlogs"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showHelp), name: NSNotification.Name("ShowHelp"), object: nil)
     }
     
     @objc func showSettings(){
@@ -60,6 +63,18 @@ class HomePageViewController: UIViewController {
     
     @objc func showLeaderboards(){
         performSegue(withIdentifier: "ShowLeaderboards", sender: nil)
+    }
+    
+    @objc func showCompetitions(){
+        performSegue(withIdentifier: "ShowCompetitions", sender: nil)
+    }
+    
+    @objc func showBlogs(){
+        performSegue(withIdentifier: "ShowBlogs", sender: nil)
+    }
+    
+    @objc func showHelp(){
+        performSegue(withIdentifier: "ShowHelp", sender: nil)
     }
     
     func setLabelStyling(){
