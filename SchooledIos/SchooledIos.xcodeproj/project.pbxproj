@@ -34,6 +34,7 @@
 		054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */; };
 		054FBA422039E3AA00FD42B1 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */; };
 		054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */; };
+		05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		054FBA2B2038B78900FD42B1 /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 		054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
+		05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				050328622054745A00010489 /* BlogViewController.swift */,
+				05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */,
 			);
 			path = "LatestNews-Options";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				05032869205475EB00010489 /* HelpViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
+				05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */,
 				050328672054756000010489 /* CompetitionMenuSelectViewController.swift in Sources */,
 				054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */,
 			);
