@@ -35,6 +35,8 @@
 		054FBA422039E3AA00FD42B1 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */; };
 		054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */; };
 		05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */; };
+		05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2A2054C8E1009E9198 /* IndividualCompetitionViewController.swift */; };
+		05E16F2D2054C900009E9198 /* SchoolCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2C2054C900009E9198 /* SchoolCompetitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		054FBA412039E3AA00FD42B1 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		054FBA46203A3BF200FD42B1 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
 		05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		05E16F2A2054C8E1009E9198 /* IndividualCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCompetitionViewController.swift; sourceTree = "<group>"; };
+		05E16F2C2054C900009E9198 /* SchoolCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCompetitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				050328662054756000010489 /* CompetitionMenuSelectViewController.swift */,
+				05E16F2A2054C8E1009E9198 /* IndividualCompetitionViewController.swift */,
+				05E16F2C2054C900009E9198 /* SchoolCompetitionViewController.swift */,
 			);
 			path = "Competitions-Options";
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
 				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
+				05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
 				0503285C204B214000010489 /* SettingsSchoolSelectionViewController.swift in Sources */,
@@ -371,6 +378,7 @@
 				05032869205475EB00010489 /* HelpViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
+				05E16F2D2054C900009E9198 /* SchoolCompetitionViewController.swift in Sources */,
 				05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */,
 				050328672054756000010489 /* CompetitionMenuSelectViewController.swift in Sources */,
 				054FBA47203A3BF200FD42B1 /* GameSelectionViewController.swift in Sources */,

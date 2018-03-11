@@ -13,9 +13,9 @@ class BlogTableViewCell: UITableViewCell {
     @IBOutlet weak var _cellView: UIView!
     @IBOutlet weak var _cellImage: UIImageView!
     @IBOutlet weak var _cellPostTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

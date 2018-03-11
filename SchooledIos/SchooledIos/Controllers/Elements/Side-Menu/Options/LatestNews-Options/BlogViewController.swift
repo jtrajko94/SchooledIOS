@@ -15,12 +15,10 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var _blogTableView: UITableView!
     
     override func viewDidLoad() {
-        _blogTableView.delegate = self
-        _blogTableView.dataSource = self
-        
         super.viewDidLoad()
         
-        
+        _blogTableView.delegate = self
+        _blogTableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +33,6 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = _blogTableView.dequeueReusableCell(withIdentifier: "postCell") as! BlogTableViewCell
         
         cell._cellView.layer.cornerRadius = cell._cellView.frame.height / 2
-        
         cell._cellPostTextView.text = posts[indexPath.row]
         cell._cellPostTextView.scrollRangeToVisible(NSRange(location:0, length:0))
         cell._cellPostTextView.isEditable = false

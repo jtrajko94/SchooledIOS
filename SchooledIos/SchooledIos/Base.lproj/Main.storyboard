@@ -1306,6 +1306,72 @@
             </objects>
             <point key="canvasLocation" x="6276" y="657"/>
         </scene>
+        <!--School Competition View Controller-->
+        <scene sceneID="fbB-Kw-7md">
+            <objects>
+                <viewController id="dQU-z9-jTX" customClass="SchoolCompetitionViewController" customModule="SchooledIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2P7-OO-iL2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vtP-bw-LTZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prU-5I-iCm">
+                                <rect key="frame" x="166" y="323" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vtP-bw-LTZ" firstAttribute="trailing" secondItem="Gfr-F2-B79" secondAttribute="trailing" id="P2r-L8-hjf"/>
+                            <constraint firstItem="vtP-bw-LTZ" firstAttribute="leading" secondItem="Gfr-F2-B79" secondAttribute="leading" id="RqB-nF-JHV"/>
+                            <constraint firstItem="vtP-bw-LTZ" firstAttribute="bottom" secondItem="Gfr-F2-B79" secondAttribute="bottom" id="pIJ-aJ-frh"/>
+                            <constraint firstItem="vtP-bw-LTZ" firstAttribute="top" secondItem="Gfr-F2-B79" secondAttribute="top" id="u02-dj-CeF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gfr-F2-B79"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkx-FQ-e93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7460" y="1102.3988005997003"/>
+        </scene>
+        <!--Individual Competition View Controller-->
+        <scene sceneID="Sr4-uW-Krx">
+            <objects>
+                <viewController id="185-aG-NMi" customClass="IndividualCompetitionViewController" customModule="SchooledIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SV1-EZ-Tik">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dNi-jx-sh8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Individual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfm-g0-KLk">
+                                <rect key="frame" x="166" y="355" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dNi-jx-sh8" firstAttribute="leading" secondItem="kIu-ZZ-jdo" secondAttribute="leading" id="PwX-6j-CfZ"/>
+                            <constraint firstItem="dNi-jx-sh8" firstAttribute="top" secondItem="kIu-ZZ-jdo" secondAttribute="top" id="aPj-at-DXr"/>
+                            <constraint firstItem="kIu-ZZ-jdo" firstAttribute="trailing" secondItem="dNi-jx-sh8" secondAttribute="trailing" id="dJ6-WV-Tb9"/>
+                            <constraint firstItem="dNi-jx-sh8" firstAttribute="bottom" secondItem="kIu-ZZ-jdo" secondAttribute="bottom" id="mEx-9d-0Ae"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kIu-ZZ-jdo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pdr-ah-Z7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8165.6000000000004" y="1440.6296851574214"/>
+        </scene>
         <!--Competition Menu Select View Controller-->
         <scene sceneID="24I-98-hB2">
             <objects>
@@ -1317,23 +1383,61 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="o2M-5G-KsT">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Competitions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSO-A2-Lwo">
-                                <rect key="frame" x="136" y="355" width="102" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-OA-SSZ">
+                                <rect key="frame" x="34.5" y="110" width="305" height="88"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L13-Wo-1MK">
+                                <rect key="frame" x="34.5" y="266" width="305" height="135"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-JL-KH8">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="55"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
+                                        <state key="normal" title="SCHOOL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dQU-z9-jTX" kind="show" id="JYR-0S-kml"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-Dq-IQa">
+                                        <rect key="frame" x="0.0" y="80" width="305" height="55"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
+                                        <state key="normal" title="INDIVIDUAL">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="185-aG-NMi" kind="show" id="V7U-3F-lFq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9ph-Dq-IQa" firstAttribute="width" secondItem="Uen-JL-KH8" secondAttribute="width" id="K4N-jF-nUW"/>
+                                    <constraint firstItem="9ph-Dq-IQa" firstAttribute="height" secondItem="Uen-JL-KH8" secondAttribute="height" id="k2Y-31-8oK"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="L13-Wo-1MK" firstAttribute="centerY" secondItem="PTy-hH-PMd" secondAttribute="centerY" id="3Ut-fE-Rjd"/>
+                            <constraint firstItem="L13-Wo-1MK" firstAttribute="centerX" secondItem="PTy-hH-PMd" secondAttribute="centerX" id="K15-mk-iUp"/>
+                            <constraint firstItem="C6g-OA-SSZ" firstAttribute="centerX" secondItem="PTy-hH-PMd" secondAttribute="centerX" id="Wyb-Ww-iPS"/>
                             <constraint firstAttribute="bottom" secondItem="o2M-5G-KsT" secondAttribute="bottom" id="b1I-gY-jls"/>
                             <constraint firstItem="o2M-5G-KsT" firstAttribute="top" secondItem="PTy-hH-PMd" secondAttribute="top" constant="64" id="cst-TT-bZz"/>
                             <constraint firstItem="o2M-5G-KsT" firstAttribute="leading" secondItem="PTy-hH-PMd" secondAttribute="leading" id="gzy-pF-ZPL"/>
+                            <constraint firstItem="o2M-5G-KsT" firstAttribute="baseline" secondItem="C6g-OA-SSZ" secondAttribute="firstBaseline" multiplier="6" constant="8" symbolType="layoutAnchor" id="r0x-9d-cHY"/>
                             <constraint firstAttribute="trailing" secondItem="o2M-5G-KsT" secondAttribute="trailing" id="rtm-Kt-HQI"/>
+                            <constraint firstItem="L13-Wo-1MK" firstAttribute="width" secondItem="C6g-OA-SSZ" secondAttribute="width" id="tIn-je-QqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A7X-hl-cCV"/>
                     </view>
+                    <connections>
+                        <outlet property="_individualButton" destination="9ph-Dq-IQa" id="4ay-ic-dBY"/>
+                        <outlet property="_schoolButton" destination="Uen-JL-KH8" id="iNs-Y8-zc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVy-0P-Xzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
