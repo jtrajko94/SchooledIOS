@@ -10,6 +10,20 @@ import UIKit
 
 class SideMenuViewController: UITableViewController {
     
+    @IBOutlet var _sideMenuTableView: UITableView!
+    @IBOutlet weak var _gamesLabel: UILabel!
+    @IBOutlet weak var _settingsLabel: UILabel!
+    @IBOutlet weak var _leaderboardsLabel: UILabel!
+    @IBOutlet weak var _competitionsLabel: UILabel!
+    @IBOutlet weak var _latestNewsLabel: UILabel!
+    @IBOutlet weak var _helpLabel: UILabel!
+    @IBOutlet weak var _logOutLabel: UILabel!
+    
+    override func viewDidLoad() {
+        _sideMenuTableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        setLabelStyling()
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
@@ -23,5 +37,16 @@ class SideMenuViewController: UITableViewController {
         case 5: NotificationCenter.default.post(name: NSNotification.Name("ShowHelp"), object: nil)
         default: break
         }
+    }
+    
+    func setLabelStyling(){
+        let labelStyling = LabelStyling();
+        labelStyling.defaultStyling(label: _gamesLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _settingsLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _leaderboardsLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _competitionsLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _latestNewsLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _helpLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _logOutLabel, fontSize: 20)
     }
 }
