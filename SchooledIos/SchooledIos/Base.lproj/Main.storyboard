@@ -1350,16 +1350,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-zZ-xEH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O8H-1d-l64">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O8H-1d-l64">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="100" id="NO8-Ld-dh8" customClass="BlogTableViewCell" customModule="SchooledIos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="100" id="NO8-Ld-dh8" customClass="BlogTableViewCell" customModule="SchooledIos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NO8-Ld-dh8" id="7m5-Zt-6Cb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lW8-ri-Eq3">
@@ -1372,21 +1372,22 @@
                                                                 <constraint firstAttribute="width" constant="80" id="eEw-tM-YDN"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-r1-Mqd">
-                                                            <rect key="frame" x="88" y="8" width="259" height="74"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a test post." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ZlB-zy-yfh">
+                                                            <rect key="frame" x="88" y="0.0" width="259" height="90"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="j2w-r1-Mqd" secondAttribute="bottom" constant="8" id="F2d-ph-Uaq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ZlB-zy-yfh" secondAttribute="bottom" id="Mib-hm-XYR"/>
+                                                        <constraint firstItem="ZlB-zy-yfh" firstAttribute="top" secondItem="lW8-ri-Eq3" secondAttribute="top" id="e07-jx-8tr"/>
                                                         <constraint firstItem="pU9-ai-oXy" firstAttribute="centerY" secondItem="lW8-ri-Eq3" secondAttribute="centerY" id="fD8-Bz-lrn"/>
-                                                        <constraint firstItem="j2w-r1-Mqd" firstAttribute="leading" secondItem="pU9-ai-oXy" secondAttribute="trailing" constant="8" id="kr0-Wq-rgU"/>
+                                                        <constraint firstItem="ZlB-zy-yfh" firstAttribute="leading" secondItem="pU9-ai-oXy" secondAttribute="trailing" constant="8" id="kvp-3N-ANo"/>
                                                         <constraint firstItem="pU9-ai-oXy" firstAttribute="leading" secondItem="lW8-ri-Eq3" secondAttribute="leading" id="mEJ-mY-3Ib"/>
-                                                        <constraint firstAttribute="trailing" secondItem="j2w-r1-Mqd" secondAttribute="trailing" constant="8" id="smu-vh-QeI"/>
-                                                        <constraint firstItem="j2w-r1-Mqd" firstAttribute="top" secondItem="lW8-ri-Eq3" secondAttribute="top" constant="8" id="yHC-CS-6oG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZlB-zy-yfh" secondAttribute="trailing" constant="8" id="pOz-gk-3yn"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1397,9 +1398,10 @@
                                                 <constraint firstItem="lW8-ri-Eq3" firstAttribute="top" secondItem="7m5-Zt-6Cb" secondAttribute="top" constant="5" id="xDm-1M-3O0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="_cellImage" destination="pU9-ai-oXy" id="haJ-Hb-onz"/>
-                                            <outlet property="_cellLabel" destination="j2w-r1-Mqd" id="O6b-LF-6nk"/>
+                                            <outlet property="_cellPostTextView" destination="ZlB-zy-yfh" id="7Fk-Zq-Num"/>
                                             <outlet property="_cellView" destination="lW8-ri-Eq3" id="A7E-gK-aDU"/>
                                         </connections>
                                     </tableViewCell>

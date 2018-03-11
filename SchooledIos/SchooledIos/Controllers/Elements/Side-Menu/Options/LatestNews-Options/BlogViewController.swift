@@ -10,18 +10,13 @@ import UIKit
 
 class BlogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let posts = ["horse", "cat", "dog", "potato", "horse", "cat", "dog", "potato","horse", "cat", "dog", "potato"]
+    let posts = ["This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!","This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!", "This is a blog post. Have fun reading this. Or not...it's really up to you dude. But let me know if it looks good. Thanks!"]
     
     @IBOutlet weak var _blogTableView: UITableView!
     
     override func viewDidLoad() {
         _blogTableView.delegate = self
         _blogTableView.dataSource = self
-        
-        _blogTableView.backgroundColor = UIColor.clear
-        let bgView: UIImageView = UIImageView(image: UIImage(named: "background"))
-        self.view.addSubview(bgView)
-        self.view.bringSubview(toFront: _blogTableView)
         
         super.viewDidLoad()
         
@@ -33,7 +28,7 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,8 +36,10 @@ class BlogViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell._cellView.layer.cornerRadius = cell._cellView.frame.height / 2
         
-        cell._cellLabel.text = posts[indexPath.row]
-        cell._cellImage.image = UIImage(named: "background")
+        cell._cellPostTextView.text = posts[indexPath.row]
+        cell._cellPostTextView.scrollRangeToVisible(NSRange(location:0, length:0))
+        cell._cellPostTextView.isEditable = false
+        cell._cellImage.image = UIImage(named: "present")
         cell._cellImage.layer.cornerRadius = cell._cellImage.frame.height / 2
         
         return cell
