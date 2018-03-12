@@ -15,9 +15,7 @@ class LabelStyling {
     func defaultStyling(label: UILabel, fontSize: CGFloat) {
 
         let attributedString = NSAttributedString(string: label.text!, attributes: [
-            NSAttributedStringKey.strokeColor : UIColor.black,
             NSAttributedStringKey.foregroundColor : UIColor.white,
-            NSAttributedStringKey.strokeWidth : NSNumber(value: -2.0),
             NSAttributedStringKey.font : UIFont(name: "ChalkboardSE-Bold", size: fontSize)!
             ])
         

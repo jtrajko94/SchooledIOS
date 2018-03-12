@@ -40,10 +40,10 @@ class HomePageViewController: UIViewController {
         
         setLabelStyling()
         
-        _raffelTicketView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        _personalPrizeView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        _schoolRankView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        _schoolPrizeView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        _raffelTicketView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        _personalPrizeView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        _schoolRankView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        _schoolPrizeView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showGames), name: NSNotification.Name("ShowGames"), object: nil)
@@ -79,13 +79,13 @@ class HomePageViewController: UIViewController {
     
     func setLabelStyling(){
         let labelStyling = LabelStyling();
-        labelStyling.defaultStyling(label: _raffelTicketsLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _schoolRankLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 35)
-        labelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 35)
-        labelStyling.defaultStyling(label: _personalPrizeLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _schoolPrizeLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _personalPrizeDaysLabel, fontSize: 17)
-        labelStyling.defaultStyling(label: _schoolPrizeDaysLabel, fontSize: 17)
+        labelStyling.defaultStyling(label: _raffelTicketsLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _schoolRankLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 40)
+        labelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 40)
+        labelStyling.defaultStyling(label: _personalPrizeLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _schoolPrizeLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _personalPrizeDaysLabel, fontSize: 20)
+        labelStyling.defaultStyling(label: _schoolPrizeDaysLabel, fontSize: 20)
     }
 }
