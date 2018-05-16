@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jd-hl-UgS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jd-hl-UgS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
@@ -14,12 +14,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ChalkboardSE.ttc">
-            <string>ChalkboardSE-Bold</string>
-            <string>ChalkboardSE-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Side Menu Container View Controller-->
         <scene sceneID="v0R-6z-SNW">
@@ -516,6 +510,7 @@
                                                     <color key="titleShadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="Login:" destination="Bx1-YA-srl" eventType="touchUpInside" id="y45-51-dF3"/>
                                                     <segue destination="Ear-g5-LBB" kind="show" id="MDR-Fa-GD4"/>
                                                 </connections>
                                             </button>
@@ -1589,10 +1584,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboardbackground" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-Yr-Qoy">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mTQ-Ee-DJP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mTQ-Ee-DJP">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Welcome to SCHOOLED! Education is important...we try to make it a little more engaging and fun.   The rules are simple:  1. Choose your school  2. Play games on a variety of subjects  3. For each game you will earn       - Raffel tickets for individual prizes       - Points for your school for rewards  4. Most importantly, Have Fun!  Mastering a subject?  Change the difficulty between games to earn even more rewards.  We'll always be giving out prizes, so work hard, learn, and don't get SCHOOLED!  For any questions or concerns, please email us at:             test@email.com  Can't find your school? Let us know:            test@email.com</mutableString>
+                                <string key="text">Welcome to SCHOOLED! Education is important...we try to make it a little more engaging and fun.   The rules are simple:  1. Choose your school  2. Play games on a variety of subjects  3. For each game you will earn       - Raffel tickets for individual prizes       - Points for your school for rewards  4. Most importantly, Have Fun!  Mastering a subject?  Change the difficulty between games to earn even more rewards.  We'll always be giving out prizes, so work hard, learn, and don't get SCHOOLED!  For any questions or concerns, please email us at:             test@email.com  Can't find your school? Let us know:            test@email.com</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1600,10 +1596,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mTQ-Ee-DJP" firstAttribute="trailing" secondItem="D7I-vW-JNW" secondAttribute="trailing" id="8sT-fZ-kHQ"/>
-                            <constraint firstItem="mTQ-Ee-DJP" firstAttribute="leading" secondItem="D7I-vW-JNW" secondAttribute="leading" id="BBI-u3-32A"/>
-                            <constraint firstItem="mTQ-Ee-DJP" firstAttribute="top" secondItem="D7I-vW-JNW" secondAttribute="top" id="IaR-9e-6eu"/>
-                            <constraint firstAttribute="bottom" secondItem="mTQ-Ee-DJP" secondAttribute="bottom" id="WVe-6T-wzg"/>
                             <constraint firstItem="rdO-Yr-Qoy" firstAttribute="leading" secondItem="cAJ-Lf-66t" secondAttribute="leading" id="kPb-2y-CA6"/>
                             <constraint firstAttribute="bottom" secondItem="rdO-Yr-Qoy" secondAttribute="bottom" id="lVg-mT-2b7"/>
                             <constraint firstAttribute="trailing" secondItem="rdO-Yr-Qoy" secondAttribute="trailing" id="qFT-DY-kvo"/>
@@ -2241,6 +2233,6 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
     <inferredMetricsTieBreakers>
         <segue reference="1rb-du-lD7"/>
         <segue reference="Ckf-u9-Q7F"/>
-        <segue reference="OFo-OU-Tgj"/>
+        <segue reference="MDR-Fa-GD4"/>
     </inferredMetricsTieBreakers>
 </document>

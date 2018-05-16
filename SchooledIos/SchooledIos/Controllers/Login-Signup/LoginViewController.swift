@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class LoginViewController: UIViewController {
     
@@ -31,10 +32,57 @@ class LoginViewController: UIViewController {
         toolBar.setItems([flexibleSpace, flexibleSpace, doneButton], animated: false)
         _emailTextField.inputAccessoryView = toolBar
         _passwordTextField.inputAccessoryView = toolBar
+        
     }
     
     @objc func doneToolBarClicked(){
         view.endEditing(true)
+    }
+    
+    @IBAction func Login(_ sender: Any) {
+        print("aaaa");
+        let username = _emailTextField.text;
+        let password = _passwordTextField.text;
+        
+        if(username == "" || password == ""){
+            //please enter credentials
+            return
+        }
+        
+        DoLogin(username!, password!)
+    }
+    
+    func DoLogin(_ user:String, _ pass:String)
+    {
+        ApiService.GetApiResponseData(url: ApiUrlService.GetUserByLogin(user: user, pass: pass)){ response in
+            if let response = response{
+                if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
+                    let jsonData = response.description.data(using: .utf8)!
+                    let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                    let apiUserData = ApiUserData(json: json as! [String : Any])
+                            
+                    //login user
+                }else if(response.status == "Success" && !TextMethods.IsApiDescriptionValid(text: response.description)){
+                    //incorrect
+                }
+            }
+        }
+    }
+    
+    func LoginToDo()
+    {
+        _emailTextField.isEnabled = true
+        _passwordTextField.isEnabled = true
+        
+        _loginButton.setTitle("Login", for: .normal)
+    }
+    
+    func LoginDone()
+    {
+        _emailTextField.isEnabled = false
+        _passwordTextField.isEnabled = false
+        
+        _loginButton.setTitle("Logout", for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
