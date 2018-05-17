@@ -40,13 +40,12 @@ class SideMenuViewController: UITableViewController {
     }
     
     func setLabelStyling(){
-        let labelStyling = LabelStyling();
-        labelStyling.defaultStyling(label: _gamesLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _settingsLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _leaderboardsLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _competitionsLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _latestNewsLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _helpLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _logOutLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _gamesLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _settingsLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _leaderboardsLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _competitionsLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _latestNewsLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _helpLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _logOutLabel, fontSize: 20)
     }
 }

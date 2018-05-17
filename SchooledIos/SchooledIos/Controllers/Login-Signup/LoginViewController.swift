@@ -40,12 +40,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
-        print("aaaa");
         let username = _emailTextField.text;
         let password = _passwordTextField.text;
         
+        TextFieldStyling.removeErrorStyling(textField: _emailTextField)
+        TextFieldStyling.removeErrorStyling(textField: _passwordTextField)
+        ButtonStyling.disableButton(button: _loginButton)
+        
         if(username == "" || password == ""){
-            //please enter credentials
+            TextFieldStyling.errorStyling(textField: _emailTextField)
+            TextFieldStyling.errorStyling(textField: _passwordTextField)
+            ButtonStyling.enableButton(button: _loginButton)
+            
+            let alert = UIAlertController(title: "Try Again!", message: "Please type an email and password.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated:true)
+            
             return
         }
         
@@ -60,10 +70,24 @@ class LoginViewController: UIViewController {
                     let jsonData = response.description.data(using: .utf8)!
                     let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
                     let apiUserData = ApiUserData(json: json as! [String : Any])
-                            
-                    //login user
+                    
+                    let encodedData = NSKeyedArchiver.archivedData(withRootObject: apiUserData)
+                    UserDefaults.standard.set(encodedData, forKey: "CurrentUser")
+                    
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "loginUserSegue", sender: self._loginButton)
+                    }
+                    
                 }else if(response.status == "Success" && !TextMethods.IsApiDescriptionValid(text: response.description)){
-                    //incorrect
+                    DispatchQueue.main.async {
+                        TextFieldStyling.errorStyling(textField: self._emailTextField)
+                        TextFieldStyling.errorStyling(textField: self._passwordTextField)
+                        ButtonStyling.enableButton(button: self._loginButton)
+                    }
+                    
+                    let alert = UIAlertController(title: "Try Again!", message: "No user was found for that email and password.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated:true)
                 }
             }
         }

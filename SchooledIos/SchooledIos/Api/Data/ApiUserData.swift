@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ApiUserData{
+class ApiUserData: NSObject, NSCoding{
     var UserRowKey: String = ""
     var UserTypeRowKey: String = ""
     var SchoolRowKey: String = ""
@@ -21,7 +21,7 @@ class ApiUserData{
     var Timestamp: Date = Date()
     var CreatedOn: Date = Date()
     
-    init(){
+    override init(){
         UserRowKey = ""
         UserTypeRowKey = ""
         SchoolRowKey = ""
@@ -33,6 +33,34 @@ class ApiUserData{
         GameDifficulty = 0
         Timestamp = Date()
         CreatedOn = Date()
+    }
+    
+    required init(coder decoder: NSCoder) {
+        self.UserRowKey = decoder.decodeObject(forKey: "UserRowKey") as? String ?? ""
+        self.UserTypeRowKey = decoder.decodeObject(forKey: "UserTypeRowKey") as? String ?? ""
+        self.SchoolRowKey = decoder.decodeObject(forKey: "SchoolRowKey") as? String ?? ""
+        self.Email = decoder.decodeObject(forKey: "Email") as? String ?? ""
+        self.Password = decoder.decodeObject(forKey: "Password") as? String ?? ""
+        self.FirstName = decoder.decodeObject(forKey: "FirstName") as? String ?? ""
+        self.LastName = decoder.decodeObject(forKey: "LastName") as? String ?? ""
+        self.IsFacebook = decoder.decodeBool(forKey: "IsFacebook")
+        self.GameDifficulty = decoder.decodeInteger(forKey: "GameDifficulty")
+        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
+        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(UserRowKey, forKey: "UserRowKey")
+        coder.encode(UserTypeRowKey, forKey: "UserTypeRowKey")
+        coder.encode(SchoolRowKey, forKey: "SchoolRowKey")
+        coder.encode(Email, forKey: "Email")
+        coder.encode("", forKey: "Password")
+        coder.encode(FirstName, forKey: "FirstName")
+        coder.encode(LastName, forKey: "LastName")
+        coder.encode(IsFacebook, forKey: "IsFacebook")
+        coder.encode(GameDifficulty, forKey: "GameDifficulty")
+        coder.encode(Timestamp, forKey: "Timestamp")
+        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -47,5 +75,14 @@ class ApiUserData{
         GameDifficulty = json["GameDifficulty"] as? Int ?? 0
         Timestamp = json["Timestamp"] as? Date ?? Date()
         CreatedOn = json["CreatedOn"] as? Date ?? Date()
+    }
+    
+    static func getCurrentUser() -> ApiUserData?{
+        if let data = UserDefaults.standard.data(forKey: "CurrentUser"),
+            let dataUser = NSKeyedUnarchiver.unarchiveObject(with: data) as? ApiUserData
+        {
+            return dataUser
+        }
+        return nil
     }
 }

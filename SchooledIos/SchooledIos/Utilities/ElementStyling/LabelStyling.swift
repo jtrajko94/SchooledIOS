@@ -12,7 +12,7 @@ import UIKit
 class LabelStyling {
     
     //Default White Text and Outlining
-    func defaultStyling(label: UILabel, fontSize: CGFloat) {
+    static func defaultStyling(label: UILabel, fontSize: CGFloat) {
 
         let attributedString = NSAttributedString(string: label.text!, attributes: [
             NSAttributedStringKey.foregroundColor : UIColor.white,

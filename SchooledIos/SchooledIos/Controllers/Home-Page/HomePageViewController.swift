@@ -26,6 +26,8 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var _schoolRankView: UIView!
     @IBOutlet weak var _raffelTicketView: UIView!
     
+    var currentUser = ApiUserData.getCurrentUser()!
+    
     @IBAction func onSideBarClicked(){
         NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
@@ -78,14 +80,13 @@ class HomePageViewController: UIViewController {
     }
     
     func setLabelStyling(){
-        let labelStyling = LabelStyling();
-        labelStyling.defaultStyling(label: _raffelTicketsLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _schoolRankLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 40)
-        labelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 40)
-        labelStyling.defaultStyling(label: _personalPrizeLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _schoolPrizeLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _personalPrizeDaysLabel, fontSize: 20)
-        labelStyling.defaultStyling(label: _schoolPrizeDaysLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _raffelTicketsLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _schoolRankLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _raffelTicketNumberLabel, fontSize: 40)
+        LabelStyling.defaultStyling(label: _schoolRankNumberLabel, fontSize: 40)
+        LabelStyling.defaultStyling(label: _personalPrizeLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _schoolPrizeLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _personalPrizeDaysLabel, fontSize: 20)
+        LabelStyling.defaultStyling(label: _schoolPrizeDaysLabel, fontSize: 20)
     }
 }

@@ -22,6 +22,7 @@
 		0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C320315D0D007C44BB /* ButtonStyling.swift */; };
 		0531D9C620316132007C44BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C520316132007C44BB /* LoginViewController.swift */; };
 		0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531D9C920316462007C44BB /* SignUpViewController.swift */; };
+		0547DFD820AD09A700411C9B /* TextFieldStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DFD720AD09A700411C9B /* TextFieldStyling.swift */; };
 		054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */; };
 		054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */; };
 		054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054FBA162034007E00FD42B1 /* HomePageViewController.swift */; };
@@ -62,6 +63,7 @@
 		0531D9C320315D0D007C44BB /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
 		0531D9C520316132007C44BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0531D9C920316462007C44BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0547DFD720AD09A700411C9B /* TextFieldStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyling.swift; sourceTree = "<group>"; };
 		054FBA122033E09C00FD42B1 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		054FBA142034005100FD42B1 /* SchoolSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSelectionViewController.swift; sourceTree = "<group>"; };
 		054FBA162034007E00FD42B1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				0531D9C320315D0D007C44BB /* ButtonStyling.swift */,
 				0503285120479E2500010489 /* LabelStyling.swift */,
+				0547DFD720AD09A700411C9B /* TextFieldStyling.swift */,
 			);
 			path = ElementStyling;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				0503285220479E2500010489 /* LabelStyling.swift in Sources */,
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
 				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
+				0547DFD820AD09A700411C9B /* TextFieldStyling.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */,
 				0576AF9720ABCC000071E1C1 /* ApiService.swift in Sources */,

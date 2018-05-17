@@ -15,4 +15,13 @@ class ButtonStyling {
     func defaultStyling(button: UIButton) {
     }
     
+    static func disableButton(button: UIButton){
+        button.isEnabled = false
+        button.alpha = 0.5;
+    }
+    
+    static func enableButton(button: UIButton){
+        button.isEnabled = true
+        button.alpha = 1.0;
+    }
 }
