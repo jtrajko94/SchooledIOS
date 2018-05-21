@@ -52,13 +52,13 @@ class ApiUrlService{
     }
     
     static func GetSchoolScoreBySearch(schoolTypeId: String, name: String, state: String, district: String, country: String) -> String{
-        var parameters = "?schooltypeid=" + schoolTypeId + "&name=" + name + "&state=" + state + "&district=" + district + "&country=" + country
+        let parameters = "?schooltypeid=" + schoolTypeId + "&name=" + name + "&state=" + state + "&district=" + district + "&country=" + country
         return ApiUrl + "school/search/" + parameters
     }
     
     //School Score API Functions
     static func GetSchoolScoreById(id: String) -> String{
-        return ApiUrl + "schoolscore/get/?id=" + parid
+        return ApiUrl + "schoolscore/get/?id=" + id
     }
     
     static func MergeSchoolScore(schoolScoreJson: String) -> String{
@@ -71,7 +71,7 @@ class ApiUrlService{
     
             //Fix API to take in state
     static func GetWinningSchoolScore(competitionId: String, count: Int?, state: String) -> String{
-        var parameters = "?competitionId=" + competitionId + "&state=" + state + "&count=" + count
+        let parameters = "?competitionId=" + competitionId + "&state=" + state + "&count=" + (count == nil ? "null" : String(count!))
         return ApiUrl + "schoolscore/getwinning/" + parameters
     }
 

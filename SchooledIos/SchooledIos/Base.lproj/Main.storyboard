@@ -793,7 +793,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FYI-m5-ytS" kind="show" id="glb-JK-8b6"/>
+                                    <action selector="SignUp:" destination="TKU-QD-l7Z" eventType="touchUpInside" id="0DZ-4s-ko9"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eQu-bb-wlE">
@@ -882,6 +882,7 @@
                         <outlet property="_passwordConfirmTextField" destination="91b-tD-gC0" id="ztQ-2a-hNE"/>
                         <outlet property="_passwordTextField" destination="XcR-xa-Rf4" id="e9b-sb-3wd"/>
                         <outlet property="_signUpButton" destination="p6J-ez-PgS" id="qIw-2p-Wbd"/>
+                        <segue destination="FYI-m5-ytS" kind="show" identifier="signUpMainSegue" id="a4f-r7-Kga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qB-6J-HbR" userLabel="First Responder" sceneMemberID="firstResponder"/>

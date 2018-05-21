@@ -54,6 +54,13 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         //Apply Styling
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _finishSchoolSelectionButton)
+        
+        let signUpUser = getSignUpUser()
+        if(signUpUser != nil){
+            //Do the school logic
+        }else{
+            _ = navigationController?.popViewController(animated: true)
+        }
     }
     
     //Picker View Delegate functions
@@ -148,5 +155,14 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    func getSignUpUser() -> ApiUserData?{
+        if let data = UserDefaults.standard.data(forKey: "SignUpUser"),
+            let dataUser = NSKeyedUnarchiver.unarchiveObject(with: data) as? ApiUserData
+        {
+            return dataUser
+        }
+        return nil
     }
 }
