@@ -40,6 +40,19 @@
 		0576AF9A20ABDAD30071E1C1 /* TextMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9920ABDAD30071E1C1 /* TextMethods.swift */; };
 		0576AF9C20ABDEF80071E1C1 /* ApiUrlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9B20ABDEF80071E1C1 /* ApiUrlService.swift */; };
 		0576AF9E20ABE1240071E1C1 /* ApiUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */; };
+		05A4B73D20B069C100A2858A /* ApiRaffelEntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B73C20B069C100A2858A /* ApiRaffelEntryData.swift */; };
+		05A4B73F20B06AEF00A2858A /* ApiQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B73E20B06AEF00A2858A /* ApiQuestionData.swift */; };
+		05A4B74120B06E7800A2858A /* ApiGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74020B06E7800A2858A /* ApiGameData.swift */; };
+		05A4B74320B0711800A2858A /* ApiGameCompletionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74220B0711800A2858A /* ApiGameCompletionData.swift */; };
+		05A4B74520B0730800A2858A /* ApiCourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74420B0730800A2858A /* ApiCourseData.swift */; };
+		05A4B74720B0748900A2858A /* ApiCompetitionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74620B0748900A2858A /* ApiCompetitionData.swift */; };
+		05A4B74920B0788A00A2858A /* ApiCollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74820B0788A00A2858A /* ApiCollectionData.swift */; };
+		05B95A8D20AFBB7C003EB195 /* ApiSubjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A8C20AFBB7C003EB195 /* ApiSubjectData.swift */; };
+		05B95A8F20AFBC7A003EB195 /* ApiUserTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A8E20AFBC7A003EB195 /* ApiUserTypeData.swift */; };
+		05B95A9120AFBD48003EB195 /* ApiSchoolTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A9020AFBD48003EB195 /* ApiSchoolTypeData.swift */; };
+		05B95A9320AFBDC6003EB195 /* ApiSchoolScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A9220AFBDC6003EB195 /* ApiSchoolScoreData.swift */; };
+		05B95A9520AFBEB8003EB195 /* ApiSchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A9420AFBEB8003EB195 /* ApiSchoolData.swift */; };
+		05B95A9720AFC089003EB195 /* ApiQuestionResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B95A9620AFC089003EB195 /* ApiQuestionResponseData.swift */; };
 		05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */; };
 		05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2A2054C8E1009E9198 /* IndividualCompetitionViewController.swift */; };
 		05E16F2D2054C900009E9198 /* SchoolCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E16F2C2054C900009E9198 /* SchoolCompetitionViewController.swift */; };
@@ -81,6 +94,19 @@
 		0576AF9920ABDAD30071E1C1 /* TextMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMethods.swift; sourceTree = "<group>"; };
 		0576AF9B20ABDEF80071E1C1 /* ApiUrlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlService.swift; sourceTree = "<group>"; };
 		0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUserData.swift; sourceTree = "<group>"; };
+		05A4B73C20B069C100A2858A /* ApiRaffelEntryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRaffelEntryData.swift; sourceTree = "<group>"; };
+		05A4B73E20B06AEF00A2858A /* ApiQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuestionData.swift; sourceTree = "<group>"; };
+		05A4B74020B06E7800A2858A /* ApiGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGameData.swift; sourceTree = "<group>"; };
+		05A4B74220B0711800A2858A /* ApiGameCompletionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGameCompletionData.swift; sourceTree = "<group>"; };
+		05A4B74420B0730800A2858A /* ApiCourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCourseData.swift; sourceTree = "<group>"; };
+		05A4B74620B0748900A2858A /* ApiCompetitionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCompetitionData.swift; sourceTree = "<group>"; };
+		05A4B74820B0788A00A2858A /* ApiCollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCollectionData.swift; sourceTree = "<group>"; };
+		05B95A8C20AFBB7C003EB195 /* ApiSubjectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSubjectData.swift; sourceTree = "<group>"; };
+		05B95A8E20AFBC7A003EB195 /* ApiUserTypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUserTypeData.swift; sourceTree = "<group>"; };
+		05B95A9020AFBD48003EB195 /* ApiSchoolTypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSchoolTypeData.swift; sourceTree = "<group>"; };
+		05B95A9220AFBDC6003EB195 /* ApiSchoolScoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSchoolScoreData.swift; sourceTree = "<group>"; };
+		05B95A9420AFBEB8003EB195 /* ApiSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSchoolData.swift; sourceTree = "<group>"; };
+		05B95A9620AFC089003EB195 /* ApiQuestionResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuestionResponseData.swift; sourceTree = "<group>"; };
 		05E16F2820548E0C009E9198 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		05E16F2A2054C8E1009E9198 /* IndividualCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCompetitionViewController.swift; sourceTree = "<group>"; };
 		05E16F2C2054C900009E9198 /* SchoolCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCompetitionViewController.swift; sourceTree = "<group>"; };
@@ -310,8 +336,21 @@
 		0576AF9120ABB9640071E1C1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */,
+				05A4B74820B0788A00A2858A /* ApiCollectionData.swift */,
+				05A4B74620B0748900A2858A /* ApiCompetitionData.swift */,
+				05A4B74420B0730800A2858A /* ApiCourseData.swift */,
+				05A4B74220B0711800A2858A /* ApiGameCompletionData.swift */,
+				05A4B74020B06E7800A2858A /* ApiGameData.swift */,
+				05A4B73E20B06AEF00A2858A /* ApiQuestionData.swift */,
+				05A4B73C20B069C100A2858A /* ApiRaffelEntryData.swift */,
+				05B95A9620AFC089003EB195 /* ApiQuestionResponseData.swift */,
 				0576AF9420ABB9DA0071E1C1 /* ApiResponseData.swift */,
+				05B95A9420AFBEB8003EB195 /* ApiSchoolData.swift */,
+				05B95A9220AFBDC6003EB195 /* ApiSchoolScoreData.swift */,
+				05B95A9020AFBD48003EB195 /* ApiSchoolTypeData.swift */,
+				05B95A8C20AFBB7C003EB195 /* ApiSubjectData.swift */,
+				0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */,
+				05B95A8E20AFBC7A003EB195 /* ApiUserTypeData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -409,30 +448,43 @@
 				0576AF9A20ABDAD30071E1C1 /* TextMethods.swift in Sources */,
 				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
 				050328632054745A00010489 /* BlogViewController.swift in Sources */,
+				05A4B74120B06E7800A2858A /* ApiGameData.swift in Sources */,
+				05A4B74720B0748900A2858A /* ApiCompetitionData.swift in Sources */,
 				05032857204B1F6300010489 /* SettingsChangePasswordViewController.swift in Sources */,
 				0503285E204BC96B00010489 /* CoursesCollectionViewCell.swift in Sources */,
+				05A4B74520B0730800A2858A /* ApiCourseData.swift in Sources */,
 				0503285220479E2500010489 /* LabelStyling.swift in Sources */,
 				0531D9C620316132007C44BB /* LoginViewController.swift in Sources */,
 				054FBA1D2036C00D00FD42B1 /* ResetPasswordViewController.swift in Sources */,
 				0547DFD820AD09A700411C9B /* TextFieldStyling.swift in Sources */,
+				05B95A9320AFBDC6003EB195 /* ApiSchoolScoreData.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */,
 				0576AF9720ABCC000071E1C1 /* ApiService.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
+				05B95A9120AFBD48003EB195 /* ApiSchoolTypeData.swift in Sources */,
+				05B95A8D20AFBB7C003EB195 /* ApiSubjectData.swift in Sources */,
 				0503285C204B214000010489 /* SettingsSchoolSelectionViewController.swift in Sources */,
 				054FBA282038B50800FD42B1 /* SubjectsViewController.swift in Sources */,
+				05B95A9720AFC089003EB195 /* ApiQuestionResponseData.swift in Sources */,
+				05A4B74320B0711800A2858A /* ApiGameCompletionData.swift in Sources */,
 				0508446D2030027300485109 /* AppDelegate.swift in Sources */,
 				054FBA172034007E00FD42B1 /* HomePageViewController.swift in Sources */,
 				0576AF9C20ABDEF80071E1C1 /* ApiUrlService.swift in Sources */,
+				05A4B74920B0788A00A2858A /* ApiCollectionData.swift in Sources */,
 				054FBA2C2038B78900FD42B1 /* LeaderboardsViewController.swift in Sources */,
+				05A4B73D20B069C100A2858A /* ApiRaffelEntryData.swift in Sources */,
+				05B95A8F20AFBC7A003EB195 /* ApiUserTypeData.swift in Sources */,
 				054FBA422039E3AA00FD42B1 /* DesignableTextField.swift in Sources */,
 				0531D9C420315D0D007C44BB /* ButtonStyling.swift in Sources */,
 				054FBA1F2037C40200FD42B1 /* ResetPasswordFormViewController.swift in Sources */,
 				05032869205475EB00010489 /* HelpViewController.swift in Sources */,
 				054FBA132033E09C00FD42B1 /* SideMenuViewController.swift in Sources */,
+				05B95A9520AFBEB8003EB195 /* ApiSchoolData.swift in Sources */,
 				0576AF9E20ABE1240071E1C1 /* ApiUserData.swift in Sources */,
 				0531D9CA20316462007C44BB /* SignUpViewController.swift in Sources */,
+				05A4B73F20B06AEF00A2858A /* ApiQuestionData.swift in Sources */,
 				0576AF9520ABB9DA0071E1C1 /* ApiResponseData.swift in Sources */,
 				05E16F2D2054C900009E9198 /* SchoolCompetitionViewController.swift in Sources */,
 				05E16F2920548E0C009E9198 /* BlogTableViewCell.swift in Sources */,
