@@ -71,14 +71,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foa-tq-POX">
-                                <rect key="frame" x="35" y="309.5" width="305" height="48"/>
+                                <rect key="frame" x="35" y="311.5" width="305" height="44"/>
                                 <state key="normal" backgroundImage="facebookLoginButtonSmall"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AN-sS-95l">
-                                <rect key="frame" x="35" y="400.5" width="305" height="48"/>
+                                <rect key="frame" x="35" y="394.5" width="305" height="44"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                 <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                <state key="normal" title="    Sign In With Email    ">
+                                <state key="normal" title="    Sign In With Email    " backgroundImage="chalkButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.39556206597222221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -86,8 +86,8 @@
                                     <segue destination="Bx1-YA-srl" kind="show" id="EiV-4N-td4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallOr" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-4Q-XHk">
-                                <rect key="frame" x="60" y="372.5" width="255" height="13"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orMain" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-4Q-XHk">
+                                <rect key="frame" x="81.5" y="370.5" width="212" height="9"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DPO-mS-g6Z">
                                 <rect key="frame" x="35" y="94" width="305" height="88"/>
@@ -462,25 +462,25 @@
                                 <rect key="frame" x="35" y="94" width="305" height="88"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aD2-JU-K3g">
-                                <rect key="frame" x="62.5" y="233.5" width="250" height="200"/>
+                                <rect key="frame" x="62.5" y="241.5" width="250" height="184"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k5f-c9-Kyv">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="184"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-kh-tYo">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="152"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="140"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-Kf-SGs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="104"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="96"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P65-DC-jpo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="48"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-s9-Kwg">
-                                                                <rect key="frame" x="0.0" y="56" width="250" height="48"/>
+                                                                <rect key="frame" x="0.0" y="52" width="250" height="44"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -488,7 +488,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-JI-EaI">
-                                                        <rect key="frame" x="0.0" y="104" width="250" height="48"/>
+                                                        <rect key="frame" x="0.0" y="96" width="250" height="44"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <size key="titleShadowOffset" width="-0.80000000000000004" height="0.80000000000000004"/>
                                                         <state key="normal" title="       Forgot Password?      ">
@@ -502,10 +502,10 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3u-NQ-KhP">
-                                                <rect key="frame" x="0.0" y="152" width="250" height="48"/>
+                                                <rect key="frame" x="0.0" y="140" width="250" height="44"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                 <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                                <state key="normal" title="Login">
+                                                <state key="normal" title="Login" backgroundImage="chalkButton">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="titleShadowColor" white="0.61857096349999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -527,10 +527,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1id-nr-07X">
-                                <rect key="frame" x="62.5" y="609" width="250" height="48"/>
+                                <rect key="frame" x="62.5" y="613" width="250" height="44"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Register" backgroundImage="chalkButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -539,7 +539,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to SCHOOLED?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YM-pT-OxU">
-                                <rect key="frame" x="84.5" y="569" width="206.5" height="32"/>
+                                <rect key="frame" x="84.5" y="573" width="206.5" height="32"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -590,19 +590,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kij-ze-AC9">
-                                <rect key="frame" x="41.5" y="299.5" width="292" height="101"/>
+                                <rect key="frame" x="41.5" y="301.5" width="292" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNn-d5-zct">
-                                        <rect key="frame" x="0.0" y="0.0" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrY-Zn-cSJ">
-                                        <rect key="frame" x="0.0" y="53" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="49" width="292" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                         <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                        <state key="normal" title="Submit">
+                                        <state key="normal" title="Submit" backgroundImage="chalkButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -656,31 +656,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9l8-t9-XI8">
-                                <rect key="frame" x="41.5" y="299.5" width="292" height="207"/>
+                                <rect key="frame" x="41.5" y="301.5" width="292" height="191"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temporary Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebF-Lv-wYg">
-                                        <rect key="frame" x="0.0" y="0.0" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1A-Ru-G0n">
-                                        <rect key="frame" x="0.0" y="53" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="49" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPD-Is-Mdr">
-                                        <rect key="frame" x="0.0" y="106" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="98" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr6-TD-Iks">
-                                        <rect key="frame" x="0.0" y="159" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="147" width="292" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                        <state key="normal" title="Reset Password">
+                                        <state key="normal" title="Reset Password" backgroundImage="chalkButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -736,10 +736,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-cg-dca">
-                                <rect key="frame" x="16" y="309.5" width="343" height="48"/>
+                                <rect key="frame" x="16" y="311.5" width="343" height="44"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Login" backgroundImage="chalkButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -785,10 +785,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6J-ez-PgS">
-                                <rect key="frame" x="35" y="533.5" width="305" height="48"/>
+                                <rect key="frame" x="35" y="519.5" width="305" height="44"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <size key="titleShadowOffset" width="0.20000000000000001" height="0.20000000000000001"/>
-                                <state key="normal" title="Sign Up">
+                                <state key="normal" title="Sign Up" backgroundImage="chalkButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -797,19 +797,19 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eQu-bb-wlE">
-                                <rect key="frame" x="35" y="299.5" width="305" height="219"/>
+                                <rect key="frame" x="35" y="301.5" width="305" height="203"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SF8-hE-uIG">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="44"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSg-5c-GeX">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="given-name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4GE-tf-RgM">
-                                                <rect key="frame" x="155" y="0.0" width="150" height="48"/>
+                                                <rect key="frame" x="155" y="0.0" width="150" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
@@ -820,22 +820,22 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="p80-Zx-UZo">
-                                        <rect key="frame" x="0.0" y="57" width="305" height="162"/>
+                                        <rect key="frame" x="0.0" y="53" width="305" height="150"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MY2-lQ-feP">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcR-xa-Rf4">
-                                                <rect key="frame" x="0.0" y="57" width="305" height="48"/>
+                                                <rect key="frame" x="0.0" y="53" width="305" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91b-tD-gC0">
-                                                <rect key="frame" x="0.0" y="114" width="305" height="48"/>
+                                                <rect key="frame" x="0.0" y="106" width="305" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -904,10 +904,10 @@
                                 <rect key="frame" x="56.5" y="94" width="262" height="114"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-f2-erQ">
-                                <rect key="frame" x="56.5" y="299.5" width="262" height="260"/>
+                                <rect key="frame" x="56.5" y="301.5" width="262" height="240"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nR-az-SOM" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="262" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -919,7 +919,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kind of School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6q0-N6-b15" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="53" width="262" height="48"/>
+                                        <rect key="frame" x="0.0" y="49" width="262" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -931,7 +931,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Your School" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-7I-V6t" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106" width="262" height="48"/>
+                                        <rect key="frame" x="0.0" y="98" width="262" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -943,7 +943,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Best Describes You?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzm-A8-bD8" customClass="DesignableTextField" customModule="SchooledIos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="159" width="262" height="48"/>
+                                        <rect key="frame" x="0.0" y="147" width="262" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -955,10 +955,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-gM-IQH">
-                                        <rect key="frame" x="0.0" y="212" width="262" height="48"/>
+                                        <rect key="frame" x="0.0" y="196" width="262" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <size key="titleShadowOffset" width="-0.20000000000000001" height="0.20000000000000001"/>
-                                        <state key="normal" title="Finish">
+                                        <state key="normal" title="Finish" backgroundImage="chalkButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1228,12 +1228,12 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DV5-ae-hqK">
-                                <rect key="frame" x="32.5" y="551.5" width="310" height="48"/>
+                                <rect key="frame" x="32.5" y="553.5" width="310" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k3-As-wQP">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
-                                        <state key="normal" title="Quick Play">
+                                        <state key="normal" title="Quick Play" backgroundImage="chalkButton">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1241,9 +1241,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCH-mO-q4h">
-                                        <rect key="frame" x="160" y="0.0" width="150" height="48"/>
+                                        <rect key="frame" x="160" y="0.0" width="150" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
-                                        <state key="normal" title="Play">
+                                        <state key="normal" title="Play" backgroundImage="chalkButton">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1839,31 +1839,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-dM-Xep">
-                                <rect key="frame" x="41.5" y="299.5" width="292" height="207"/>
+                                <rect key="frame" x="41.5" y="301.5" width="292" height="191"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqq-Vi-FQQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxS-77-HRR">
-                                        <rect key="frame" x="0.0" y="53" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="49" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfm-bX-5zZ">
-                                        <rect key="frame" x="0.0" y="106" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="98" width="292" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE7-qr-rPq">
-                                        <rect key="frame" x="0.0" y="159" width="292" height="48"/>
+                                        <rect key="frame" x="0.0" y="147" width="292" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <size key="titleShadowOffset" width="-0.29999999999999999" height="0.29999999999999999"/>
-                                        <state key="normal" title="UPDATE">
+                                        <state key="normal" title="UPDATE" backgroundImage="chalkButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -2217,9 +2217,11 @@ uh68Hr4ewx7LMDcwOTA+MEwwUDBXMFwwaTBsMHkwfjCGMIkwjjCWMJkwqzCuMLMAAAAAAAACAQAAAAAA
 AABZAAAAAAAAAAAAAAAAAAAwtQ
 </mutableData>
         </image>
+        <image name="chalkButton" width="128" height="44"/>
         <image name="chalkboardbackground" width="621" height="1104"/>
         <image name="facebookLoginButtonSmall" width="243" height="39"/>
         <image name="moneybag" width="36" height="36"/>
+        <image name="orMain" width="212" height="9"/>
         <image name="passwordHasBeenReset" width="343" height="98"/>
         <image name="present" width="37" height="37"/>
         <image name="prize" width="37" height="37"/>
@@ -2228,12 +2230,11 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
         <image name="selectyourschool" width="262" height="114"/>
         <image name="sidebarNavSmall" width="24" height="24"/>
         <image name="smallLogo" width="305" height="88"/>
-        <image name="smallOr" width="255" height="13"/>
         <image name="ticket" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cMe-kG-7zC"/>
+        <segue reference="1rb-du-lD7"/>
         <segue reference="Ckf-u9-Q7F"/>
-        <segue reference="oGx-uj-xdo"/>
+        <segue reference="KZi-EV-arw"/>
     </inferredMetricsTieBreakers>
 </document>
