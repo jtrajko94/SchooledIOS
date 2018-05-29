@@ -23,4 +23,14 @@ class TextFieldStyling {
         textField.layer.borderWidth = 0
     }
     
+    static func disableTextField(textField: UITextField){
+        textField.isEnabled = false
+        textField.alpha = 0.5;
+    }
+    
+    static func enableTextField(textField: UITextField){
+        textField.isEnabled = true
+        textField.alpha = 1.0;
+    }
+    
 }

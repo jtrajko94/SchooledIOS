@@ -15,6 +15,13 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     let schools = ["Glenbard East", "Addison Trail"]
     let userTypes = ["Elementary Student", "Middle School Student", "High School Student", "Parent", "Other"]
     
+    var selectedState = ""
+    var selectedSchoolType = ""
+    var selectedSchool = ""
+    var userType = ""
+    
+    var signUpUser = ApiUserData()
+    
     var selectedField = UITextField()
     var selectedRow = 0
 
@@ -55,12 +62,24 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         let buttonStyling = ButtonStyling();
         buttonStyling.defaultStyling(button: _finishSchoolSelectionButton)
         
-        let signUpUser = getSignUpUser()
-        if(signUpUser != nil){
-            //Do the school logic
+        signUpUser = getSignUpUser()!
+        if(signUpUser.FirstName != ""){
+            ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
+            TextFieldStyling.disableTextField(textField: _schoolTypeTextField)
+            TextFieldStyling.disableTextField(textField: _schoolSelectionTextField)
+            TextFieldStyling.disableTextField(textField: _userTypeTextField)
         }else{
             _ = navigationController?.popViewController(animated: true)
         }
+    }
+    
+    @objc func schoolTypeSelectionDidChange(_ textField: UITextField) {
+        //if new change different, disable kind of studnet and finish. If empty, do nothing
+        //if same do nothing
+    }
+    
+    @objc func schoolSelectionDidChange(_ textField: UITextField) {
+        
     }
     
     //Picker View Delegate functions
@@ -112,12 +131,41 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         selectedField.resignFirstResponder()
         if(selectedField == _stateSelectionTextField){
             selectedField.text = states[selectedRow]
+            if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedState){
+                ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
+                TextFieldStyling.enableTextField(textField: _schoolTypeTextField)
+                _schoolTypeTextField.text = ""
+                TextFieldStyling.disableTextField(textField: _schoolSelectionTextField)
+                _schoolSelectionTextField.text = ""
+                TextFieldStyling.disableTextField(textField: _userTypeTextField)
+                 _userTypeTextField.text = ""
+                selectedState = selectedField.text!
+            }
+            
         } else if(selectedField == _schoolTypeTextField){
             selectedField.text = schoolTypes[selectedRow]
+            if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedSchoolType){
+                ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
+                TextFieldStyling.enableTextField(textField: _schoolSelectionTextField)
+                _schoolSelectionTextField.text = ""
+                TextFieldStyling.disableTextField(textField: _userTypeTextField)
+                 _userTypeTextField.text = ""
+                selectedSchoolType = selectedField.text!
+            }
+            
         } else if(selectedField == _schoolSelectionTextField){
             selectedField.text = schools[selectedRow]
+            if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedSchool){
+                ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
+                TextFieldStyling.enableTextField(textField: _userTypeTextField)
+                _userTypeTextField.text = ""
+                selectedSchool = selectedField.text!
+            }
         } else if(selectedField == _userTypeTextField){
             selectedField.text = userTypes[selectedRow]
+            if(!(selectedField.text?.isEmpty)!){
+                ButtonStyling.enableButton(button: _finishSchoolSelectionButton)
+            }
         }
     }
     
