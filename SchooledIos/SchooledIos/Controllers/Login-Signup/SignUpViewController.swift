@@ -79,7 +79,19 @@ class SignUpViewController: UIViewController {
             isValid = false
             errorMessage += "Please enter your email. \n"
             TextFieldStyling.errorStyling(textField: _eMailTextField)
+        }else{
+            //TODO make this await
+            ApiService.GetApiResponseData(url: ApiUrlService.GetUserByEmail(email: _eMailTextField.text!)){ response in
+                if let response = response{
+                    if(response.status == "Success" && !TextMethods.IsApiDescriptionValid(text: response.description)){
+                        isValid = false
+                        errorMessage += "Please enter a new email. An account exists already with this one. \n"
+                        TextFieldStyling.errorStyling(textField: self._eMailTextField)
+                    }
+                }
+            }
         }
+        
         if(!TextMethods.IsPasswordValid(text: user.Password)){
             isValid = false
             errorMessage += "Password needs to be at least 6 characters. \n"

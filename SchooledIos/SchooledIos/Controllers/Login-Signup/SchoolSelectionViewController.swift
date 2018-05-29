@@ -10,7 +10,7 @@ import UIKit
 
 class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
-    let states = ["Alabama", "Georgia", "Illinois", "Wyoming"]
+    let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
     let schoolTypes = ["Elementary School", "Middle School", "High School"]
     let schools = ["Glenbard East", "Addison Trail"]
     let userTypes = ["Elementary Student", "Middle School Student", "High School Student", "Parent", "Other"]

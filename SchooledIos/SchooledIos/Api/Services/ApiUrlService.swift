@@ -25,6 +25,10 @@ class ApiUrlService{
         return ApiUrl + "user/getbylogin/?email=" + user + "&password=" + pass
     }
     
+    static func GetUserByEmail(email: String) -> String {
+        return ApiUrl + "user/getbyemail/?email=" + email
+    }
+    
     static func MergeUser(userJson: String) -> String{
         return ApiUrl + "user/merge/?userjson=" + userJson
     }
