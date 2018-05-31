@@ -151,6 +151,30 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                 TextFieldStyling.disableTextField(textField: _userTypeTextField)
                  _userTypeTextField.text = ""
                 selectedSchoolType = selectedField.text!
+                
+                //load screen
+                let group = DispatchGroup()
+                group.enter()
+                
+                ApiService.GetApiResponseData(url: ApiUrlService.GetSchoolScoreBySearch(schoolTypeId: "FE3B2875-D634-462B-9EAB-B0959594781E", name: "", state: "", district: "", country: "")){ response in
+                    if let response = response{
+                        if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
+                            let jsonData = response.description.data(using: .utf8)!
+                            let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                            
+                            if let array = json as? NSArray {
+                                for obj in array{
+                                    let apiSchoolData = ApiSchoolData(json: obj as! [String : Any])
+                                    //Update array with schools
+                                }
+                            }
+                            
+                        }
+                    }
+                    group.leave()
+                }
+                
+                group.wait()
             }
             
         } else if(selectedField == _schoolSelectionTextField){

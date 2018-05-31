@@ -81,15 +81,22 @@ class SignUpViewController: UIViewController {
             TextFieldStyling.errorStyling(textField: _eMailTextField)
         }else{
             //TODO make this await
+            let group = DispatchGroup()
+            group.enter()
+            
             ApiService.GetApiResponseData(url: ApiUrlService.GetUserByEmail(email: _eMailTextField.text!)){ response in
                 if let response = response{
-                    if(response.status == "Success" && !TextMethods.IsApiDescriptionValid(text: response.description)){
+                    if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
                         isValid = false
                         errorMessage += "Please enter a new email. An account exists already with this one. \n"
                         TextFieldStyling.errorStyling(textField: self._eMailTextField)
                     }
                 }
+                
+                group.leave()
             }
+            
+            group.wait()
         }
         
         if(!TextMethods.IsPasswordValid(text: user.Password)){
