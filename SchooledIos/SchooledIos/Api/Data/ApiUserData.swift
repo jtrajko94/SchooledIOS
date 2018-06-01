@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ApiUserData: NSObject, NSCoding{
+class ApiUserData: NSObject, NSCoding, Codable{
     var UserRowKey: String = ""
     var UserTypeRowKey: String = ""
     var SchoolRowKey: String = ""
@@ -30,7 +30,7 @@ class ApiUserData: NSObject, NSCoding{
         FirstName = ""
         LastName = ""
         IsFacebook = false
-        GameDifficulty = 0
+        GameDifficulty = 5
         Timestamp = Date()
         CreatedOn = Date()
     }
@@ -54,7 +54,7 @@ class ApiUserData: NSObject, NSCoding{
         coder.encode(UserTypeRowKey, forKey: "UserTypeRowKey")
         coder.encode(SchoolRowKey, forKey: "SchoolRowKey")
         coder.encode(Email, forKey: "Email")
-        coder.encode("", forKey: "Password")
+        coder.encode(Password, forKey: "Password")
         coder.encode(FirstName, forKey: "FirstName")
         coder.encode(LastName, forKey: "LastName")
         coder.encode(IsFacebook, forKey: "IsFacebook")
@@ -72,7 +72,7 @@ class ApiUserData: NSObject, NSCoding{
         FirstName = json["FirstName"] as? String ?? ""
         LastName = json["LastName"] as? String ?? ""
         IsFacebook = json["IsFacebook"] as? Bool ?? false
-        GameDifficulty = json["GameDifficulty"] as? Int ?? 0
+        GameDifficulty = json["GameDifficulty"] as? Int ?? 5
         Timestamp = json["Timestamp"] as? Date ?? Date()
         CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }

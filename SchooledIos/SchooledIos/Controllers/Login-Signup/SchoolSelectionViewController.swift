@@ -12,8 +12,23 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     
     let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
     let schoolTypes = ["Elementary School", "Middle School", "High School"]
-    let schools = ["Glenbard East", "Addison Trail"]
-    let userTypes = ["Elementary Student", "Middle School Student", "High School Student", "Parent", "Other"]
+    var schools: [String] = []
+    let userTypes = ["Elementary Student", "Middle School Student", "High School Student", "College Student", "Parent", "Other"]
+    var schoolHash: [String: String] = [:]
+    var schoolTypeHash: [String: String] = [
+        "Elementary School" : "2236D1C5-EF70-4559-9F57-B37E49EAF814",
+        "Middle School" : "0E48E3B7-93CF-4C31-A1E9-869AB92AB548",
+        "High School" : "FE3B2875-D634-462B-9EAB-B0959594781E"
+    ]
+    var userTypeHash: [String: String] = [
+        "Elementary School Student" : "8597B5A9-E9C0-4650-B934-7D86D0FB2BDD",
+        "Middle School Student" : "DEC3641D-0CAE-499F-932F-4EA018C2C717",
+        "High School Student" : "6047EA7C-CE2E-4DE9-9006-04A86F6BCC71",
+        "Parent" : "80F29099-BA48-4239-B924-20AA3AA5DDC1",
+        "Other" : "02297A25-DAD1-4376-9E23-2261C4702153",
+        "College Student" : "775D4CB6-EDC2-4168-B5B6-8D1B944178F6"
+    ]
+    
     
     var selectedState = ""
     var selectedSchoolType = ""
@@ -146,8 +161,6 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
             selectedField.text = schoolTypes[selectedRow]
             if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedSchoolType){
                 ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
-                TextFieldStyling.enableTextField(textField: _schoolSelectionTextField)
-                _schoolSelectionTextField.text = ""
                 TextFieldStyling.disableTextField(textField: _userTypeTextField)
                  _userTypeTextField.text = ""
                 selectedSchoolType = selectedField.text!
@@ -156,16 +169,20 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                 let group = DispatchGroup()
                 group.enter()
                 
-                ApiService.GetApiResponseData(url: ApiUrlService.GetSchoolScoreBySearch(schoolTypeId: "FE3B2875-D634-462B-9EAB-B0959594781E", name: "", state: "", district: "", country: "")){ response in
+                ApiService.GetApiResponseData(url: ApiUrlService.GetSchoolScoreBySearch(schoolTypeId: schoolTypeHash[_schoolTypeTextField.text!]!, name: "", state: _stateSelectionTextField.text!, district: "", country: "")){ response in
                     if let response = response{
                         if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
                             let jsonData = response.description.data(using: .utf8)!
                             let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
                             
                             if let array = json as? NSArray {
+                                self.schools = []
+                                self.schoolHash = [:]
                                 for obj in array{
                                     let apiSchoolData = ApiSchoolData(json: obj as! [String : Any])
                                     //Update array with schools
+                                    self.schools.append(apiSchoolData.Name)
+                                    self.schoolHash[apiSchoolData.Name] = apiSchoolData.SchoolRowKey
                                 }
                             }
                             
@@ -175,6 +192,15 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                 }
                 
                 group.wait()
+                if(schools.isEmpty){
+                    let alert = UIAlertController(title: "Don't see your school?", message: "You can't SCHOOL this school yet. Let us know to add it!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated:true)
+                }else{
+                    TextFieldStyling.enableTextField(textField: _schoolSelectionTextField)
+                    _schoolSelectionTextField.text = ""
+                    schoolPickerView.reloadAllComponents();
+                }
             }
             
         } else if(selectedField == _schoolSelectionTextField){
@@ -234,5 +260,41 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
             return dataUser
         }
         return nil
+    }
+    
+    @IBAction func doFinish(_ sender: Any) {
+        signUpUser.SchoolRowKey = schoolHash[_schoolSelectionTextField.text!]!
+        signUpUser.UserTypeRowKey = userTypeHash[_userTypeTextField.text!]!
+        
+        //load screen
+        let group = DispatchGroup()
+        group.enter()
+        
+        let jsonEncoder = JSONEncoder()
+        do{
+            let jsonData = try jsonEncoder.encode(signUpUser)
+            let json = String(data: jsonData, encoding: String.Encoding.utf8)
+            let newjson = json?.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil)
+            
+            ApiService.GetApiResponseData(url: ApiUrlService.MergeUser(userJson: newjson!)){ response in
+                if let response = response{
+                    if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
+                        let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.signUpUser)
+                        UserDefaults.standard.set(encodedData, forKey: "CurrentUser")
+                        
+                        self.performSegue(withIdentifier: "signUpSchoolSegue", sender: self._finishSchoolSelectionButton)
+                    }
+                }
+                group.leave()
+            }
+        }catch {
+            let alert = UIAlertController(title: "Something went wrong!", message: "Please try again.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated:true)
+            
+            group.leave()
+        }
+        
+        group.wait()
     }
 }

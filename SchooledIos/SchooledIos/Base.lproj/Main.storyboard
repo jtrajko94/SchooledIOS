@@ -744,7 +744,7 @@
                                     <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ear-g5-LBB" kind="show" id="OFo-OU-Tgj"/>
+                                    <segue destination="Ear-g5-LBB" kind="show" identifier="" id="OFo-OU-Tgj"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordHasBeenReset" translatesAutoresizingMaskIntoConstraints="NO" id="Pir-CH-GDO">
@@ -963,7 +963,7 @@
                                             <color key="titleShadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Ear-g5-LBB" kind="show" id="KZi-EV-arw"/>
+                                            <action selector="doFinish:" destination="FYI-m5-ytS" eventType="touchUpInside" id="5Oc-vz-s8E"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -995,6 +995,7 @@
                         <outlet property="_schoolTypeTextField" destination="6q0-N6-b15" id="6Yg-nj-HMc"/>
                         <outlet property="_stateSelectionTextField" destination="5nR-az-SOM" id="pBO-jH-tbg"/>
                         <outlet property="_userTypeTextField" destination="vzm-A8-bD8" id="dWL-Pp-XAn"/>
+                        <segue destination="Ear-g5-LBB" kind="show" identifier="signUpSchoolSegue" id="K9g-17-Niw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y70-z7-6GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2235,6 +2236,6 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
     <inferredMetricsTieBreakers>
         <segue reference="1rb-du-lD7"/>
         <segue reference="Ckf-u9-Q7F"/>
-        <segue reference="KZi-EV-arw"/>
+        <segue reference="K9g-17-Niw"/>
     </inferredMetricsTieBreakers>
 </document>
