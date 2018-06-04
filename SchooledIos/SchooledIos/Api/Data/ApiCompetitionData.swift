@@ -28,8 +28,6 @@ class ApiCompetitionData: NSObject, NSCoding{
     var Name: String = ""
     var Description: String = ""
     var IsIndividual: Bool = false
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         CompetitionRowKey = ""
@@ -51,8 +49,6 @@ class ApiCompetitionData: NSObject, NSCoding{
         Name = ""
         Description = ""
         IsIndividual = false
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -75,8 +71,6 @@ class ApiCompetitionData: NSObject, NSCoding{
         self.Name = decoder.decodeObject(forKey: "Name") as? String ?? ""
         self.Description = decoder.decodeObject(forKey: "Description") as? String ?? ""
         self.IsIndividual = decoder.decodeBool(forKey: "IsIndividual")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -99,8 +93,6 @@ class ApiCompetitionData: NSObject, NSCoding{
         coder.encode(Name, forKey: "Name")
         coder.encode(Description, forKey: "Description")
         coder.encode(IsIndividual, forKey: "IsIndividual")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -123,7 +115,5 @@ class ApiCompetitionData: NSObject, NSCoding{
         Name = json["Name"] as? String ?? ""
         Description = json["Description"] as? String ?? ""
         IsIndividual = json["IsIndividual"] as? Bool ?? false
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }

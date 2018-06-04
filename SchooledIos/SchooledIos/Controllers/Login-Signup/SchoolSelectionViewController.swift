@@ -180,7 +180,6 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                                 self.schoolHash = [:]
                                 for obj in array{
                                     let apiSchoolData = ApiSchoolData(json: obj as! [String : Any])
-                                    //Update array with schools
                                     self.schools.append(apiSchoolData.Name)
                                     self.schoolHash[apiSchoolData.Name] = apiSchoolData.SchoolRowKey
                                 }
@@ -262,10 +261,21 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         return nil
     }
     
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
     @IBAction func doFinish(_ sender: Any) {
         signUpUser.SchoolRowKey = schoolHash[_schoolSelectionTextField.text!]!
         signUpUser.UserTypeRowKey = userTypeHash[_userTypeTextField.text!]!
-        
+        var finished = false
         //load screen
         let group = DispatchGroup()
         group.enter()
@@ -273,15 +283,16 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         let jsonEncoder = JSONEncoder()
         do{
             let jsonData = try jsonEncoder.encode(signUpUser)
-            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            let newjson = json?.replacingOccurrences(of: "\\", with: "", options: .literal, range: nil)
-            
-            ApiService.GetApiResponseData(url: ApiUrlService.MergeUser(userJson: newjson!)){ response in
+            let jsonString = String(data: jsonData, encoding: .utf8)
+
+            ApiService.GetApiResponseData(url: ApiUrlService.MergeUser(userJson: jsonString!)){ response in
                 if let response = response{
                     if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
+                        self.signUpUser.Password = "";
                         let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.signUpUser)
                         UserDefaults.standard.set(encodedData, forKey: "CurrentUser")
-                        
+                        UserDefaults.standard.set(nil, forKey: "SignUpUser")
+                        finished = true
                         self.performSegue(withIdentifier: "signUpSchoolSegue", sender: self._finishSchoolSelectionButton)
                     }
                 }
@@ -296,5 +307,9 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         }
         
         group.wait()
+        
+        if(finished){
+            self.performSegue(withIdentifier: "signUpSchoolSegue", sender: self._finishSchoolSelectionButton)
+        }
     }
 }

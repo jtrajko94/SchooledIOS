@@ -13,16 +13,12 @@ class ApiRaffelEntryData: NSObject, NSCoding{
     var UserRowKey: String = ""
     var CompetitionRowKey: String = ""
     var TicketCount: Int = 0
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         RaffelEntryRowKey = ""
         UserRowKey = ""
         CompetitionRowKey = ""
         TicketCount = 0
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -30,8 +26,6 @@ class ApiRaffelEntryData: NSObject, NSCoding{
         self.UserRowKey = decoder.decodeObject(forKey: "UserRowKey") as? String ?? ""
         self.CompetitionRowKey = decoder.decodeObject(forKey: "CompetitionRowKey") as? String ?? ""
         self.TicketCount = decoder.decodeInteger(forKey: "TicketCount")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -39,8 +33,6 @@ class ApiRaffelEntryData: NSObject, NSCoding{
         coder.encode(UserRowKey, forKey: "UserRowKey")
         coder.encode(CompetitionRowKey, forKey: "CompetitionRowKey")
         coder.encode(TicketCount, forKey: "TicketCount")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -48,7 +40,5 @@ class ApiRaffelEntryData: NSObject, NSCoding{
         UserRowKey = json["UserRowKey"] as? String ?? ""
         CompetitionRowKey = json["CompetitionRowKey"] as? String ?? ""
         TicketCount = json["TicketCount"] as? Int ?? 0
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }

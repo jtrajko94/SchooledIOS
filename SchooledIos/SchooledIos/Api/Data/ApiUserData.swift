@@ -18,8 +18,6 @@ class ApiUserData: NSObject, NSCoding, Codable{
     var LastName: String = ""
     var IsFacebook: Bool = false
     var GameDifficulty: Int = 5
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         UserRowKey = ""
@@ -31,8 +29,6 @@ class ApiUserData: NSObject, NSCoding, Codable{
         LastName = ""
         IsFacebook = false
         GameDifficulty = 5
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -45,8 +41,6 @@ class ApiUserData: NSObject, NSCoding, Codable{
         self.LastName = decoder.decodeObject(forKey: "LastName") as? String ?? ""
         self.IsFacebook = decoder.decodeBool(forKey: "IsFacebook")
         self.GameDifficulty = decoder.decodeInteger(forKey: "GameDifficulty")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -59,8 +53,6 @@ class ApiUserData: NSObject, NSCoding, Codable{
         coder.encode(LastName, forKey: "LastName")
         coder.encode(IsFacebook, forKey: "IsFacebook")
         coder.encode(GameDifficulty, forKey: "GameDifficulty")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -73,11 +65,13 @@ class ApiUserData: NSObject, NSCoding, Codable{
         LastName = json["LastName"] as? String ?? ""
         IsFacebook = json["IsFacebook"] as? Bool ?? false
         GameDifficulty = json["GameDifficulty"] as? Int ?? 5
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
     
     static func getCurrentUser() -> ApiUserData?{
+        if (UserDefaults.standard.object(forKey: "CurrentUser") == nil){
+            return nil
+        }
+        
         if let data = UserDefaults.standard.data(forKey: "CurrentUser"),
             let dataUser = NSKeyedUnarchiver.unarchiveObject(with: data) as? ApiUserData
         {

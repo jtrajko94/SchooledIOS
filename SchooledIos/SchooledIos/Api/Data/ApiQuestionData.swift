@@ -20,8 +20,6 @@ class ApiQuestionData: NSObject, NSCoding{
     var AnswerFour: String = ""
     var Difficulty: Int = 5
     var CorrectAnswer: Int = 0
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         QuestionRowKey = ""
@@ -35,8 +33,6 @@ class ApiQuestionData: NSObject, NSCoding{
         AnswerFour = ""
         Difficulty = 5
         CorrectAnswer = 0
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -51,8 +47,6 @@ class ApiQuestionData: NSObject, NSCoding{
         self.AnswerFour = decoder.decodeObject(forKey: "AnswerFour") as? String ?? ""
         self.Difficulty = decoder.decodeInteger(forKey: "Difficulty")
         self.CorrectAnswer = decoder.decodeInteger(forKey: "CorrectAnswer")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -67,8 +61,6 @@ class ApiQuestionData: NSObject, NSCoding{
         coder.encode(AnswerFour, forKey: "AnswerFour")
         coder.encode(Difficulty, forKey: "Difficulty")
         coder.encode(CorrectAnswer, forKey: "CorrectAnswer")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -83,8 +75,6 @@ class ApiQuestionData: NSObject, NSCoding{
         AnswerFour = json["AnswerFour"] as? String ?? ""
         Difficulty = json["Difficulty"] as? Int ?? 5
         CorrectAnswer = json["CorrectAnswer"] as? Int ?? 0
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }
 

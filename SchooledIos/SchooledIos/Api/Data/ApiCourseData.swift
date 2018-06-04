@@ -13,16 +13,12 @@ class ApiCourseData: NSObject, NSCoding{
     var SubjectRowKey: String = ""
     var Name: String = ""
     var Image: String = ""
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         CourseRowKey = ""
         SubjectRowKey = ""
         Name = ""
         Image = ""
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -30,8 +26,6 @@ class ApiCourseData: NSObject, NSCoding{
         self.SubjectRowKey = decoder.decodeObject(forKey: "SubjectRowKey") as? String ?? ""
         self.Name = decoder.decodeObject(forKey: "Name") as? String ?? ""
         self.Image = decoder.decodeObject(forKey: "Image") as? String ?? ""
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -39,8 +33,6 @@ class ApiCourseData: NSObject, NSCoding{
         coder.encode(SubjectRowKey, forKey: "SubjectRowKey")
         coder.encode(Name, forKey: "Name")
         coder.encode(Image, forKey: "Image")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -48,7 +40,5 @@ class ApiCourseData: NSObject, NSCoding{
         SubjectRowKey = json["SubjectRowKey"] as? String ?? ""
         Name = json["Name"] as? String ?? ""
         Image = json["Image"] as? String ?? ""
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }

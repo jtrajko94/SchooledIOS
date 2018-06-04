@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jd-hl-UgS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jd-hl-UgS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -115,6 +115,7 @@
                     <navigationItem key="navigationItem" id="j3f-kD-CnC"/>
                     <connections>
                         <outlet property="_signInWithEmailButton" destination="1AN-sS-95l" id="Hfx-5R-4Fs"/>
+                        <segue destination="Ear-g5-LBB" kind="show" identifier="loggedUserSegue" id="cf2-cD-h7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2236,6 +2237,6 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
     <inferredMetricsTieBreakers>
         <segue reference="1rb-du-lD7"/>
         <segue reference="Ckf-u9-Q7F"/>
-        <segue reference="K9g-17-Niw"/>
+        <segue reference="cf2-cD-h7L"/>
     </inferredMetricsTieBreakers>
 </document>

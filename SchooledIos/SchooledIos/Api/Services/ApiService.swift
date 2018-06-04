@@ -10,7 +10,9 @@ import Foundation
 
 class ApiService{
     class func GetApiResponseData(url: String, completion: @escaping (ApiResponseData?) -> ()) {
-        var request = URLRequest(url: URL(string: url)!)
+        let newUrl = url.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)
+
+        var request = URLRequest(url: URL(string: newUrl!)!)
         request.httpMethod = "POST"
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {

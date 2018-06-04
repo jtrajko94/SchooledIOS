@@ -19,8 +19,6 @@ class ApiSchoolData: NSObject, NSCoding{
     var Zipcode: String = ""
     var District: String = ""
     var Country: String = ""
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         SchoolRowKey = ""
@@ -33,8 +31,6 @@ class ApiSchoolData: NSObject, NSCoding{
         Zipcode = ""
         District = ""
         Country = ""
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -48,8 +44,6 @@ class ApiSchoolData: NSObject, NSCoding{
         self.Zipcode = decoder.decodeObject(forKey: "Zipcode") as? String ?? ""
         self.District = decoder.decodeObject(forKey: "District") as? String ?? ""
         self.Country = decoder.decodeObject(forKey: "Country") as? String ?? ""
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -63,8 +57,6 @@ class ApiSchoolData: NSObject, NSCoding{
         coder.encode(Zipcode, forKey: "Zipcode")
         coder.encode(District, forKey: "District")
         coder.encode(Country, forKey: "Country")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -78,7 +70,5 @@ class ApiSchoolData: NSObject, NSCoding{
         Zipcode = json["Zipcode"] as? String ?? ""
         District = json["District"] as? String ?? ""
         Country = json["Country"] as? String ?? ""
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }

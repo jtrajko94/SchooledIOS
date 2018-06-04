@@ -17,8 +17,6 @@ class ApiGameCompletionData: NSObject, NSCoding{
     var Points: Int = 0
     var Difficulty: Int = 5
     var RaffelTickets: Int = 0
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         GameCompletionKey = ""
@@ -29,8 +27,6 @@ class ApiGameCompletionData: NSObject, NSCoding{
         Points = 0
         Difficulty = 0
         RaffelTickets = 0
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -42,8 +38,6 @@ class ApiGameCompletionData: NSObject, NSCoding{
         self.Points = decoder.decodeInteger(forKey: "Points")
         self.Difficulty = decoder.decodeInteger(forKey: "Difficulty")
         self.RaffelTickets = decoder.decodeInteger(forKey: "RaffelTickets")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -55,8 +49,6 @@ class ApiGameCompletionData: NSObject, NSCoding{
         coder.encode(Points, forKey: "Points")
         coder.encode(Difficulty, forKey: "Difficulty")
         coder.encode(RaffelTickets, forKey: "RaffelTickets")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -68,7 +60,5 @@ class ApiGameCompletionData: NSObject, NSCoding{
         Points = json["Points"] as? Int ?? 0
         Difficulty = json["Difficulty"] as? Int ?? 5
         RaffelTickets = json["RaffelTickets"] as? Int ?? 0
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }

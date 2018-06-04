@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        if(ApiUserData.getCurrentUser() != nil){
+            self.performSegue(withIdentifier: "loggedUserSegue", sender: self)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

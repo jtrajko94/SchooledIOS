@@ -13,16 +13,12 @@ class ApiSchoolScoreData: NSObject, NSCoding{
     var CompetitionRowKey: String = ""
     var SchoolRowKey: String = ""
     var Points: Int? = 0
-    var Timestamp: Date = Date()
-    var CreatedOn: Date = Date()
     
     override init(){
         SchoolScoreRowKey = ""
         CompetitionRowKey = ""
         SchoolRowKey = ""
         Points = 0
-        Timestamp = Date()
-        CreatedOn = Date()
     }
     
     required init(coder decoder: NSCoder) {
@@ -30,8 +26,6 @@ class ApiSchoolScoreData: NSObject, NSCoding{
         self.CompetitionRowKey = decoder.decodeObject(forKey: "CompetitionRowKey") as? String ?? ""
         self.SchoolRowKey = decoder.decodeObject(forKey: "SchoolRowKey") as? String ?? ""
         self.Points = decoder.decodeInteger(forKey: "Points")
-        self.Timestamp = decoder.decodeObject(forKey: "Timestamp") as? Date ?? Date()
-        self.CreatedOn = decoder.decodeObject(forKey: "CreatedOn") as? Date ?? Date()
     }
     
     func encode(with coder: NSCoder) {
@@ -39,8 +33,6 @@ class ApiSchoolScoreData: NSObject, NSCoding{
         coder.encode(CompetitionRowKey, forKey: "CompetitionRowKey")
         coder.encode(SchoolRowKey, forKey: "SchoolRowKey")
         coder.encode(Points, forKey: "Points")
-        coder.encode(Timestamp, forKey: "Timestamp")
-        coder.encode(CreatedOn, forKey: "CreatedOn")
     }
     
     init(json: [String: Any]){
@@ -48,8 +40,6 @@ class ApiSchoolScoreData: NSObject, NSCoding{
         CompetitionRowKey = json["CompetitionRowKey"] as? String ?? ""
         SchoolRowKey = json["SchoolRowKey"] as? String ?? ""
         Points = json["Points"] as? Int ?? 0
-        Timestamp = json["Timestamp"] as? Date ?? Date()
-        CreatedOn = json["CreatedOn"] as? Date ?? Date()
     }
 }
 
