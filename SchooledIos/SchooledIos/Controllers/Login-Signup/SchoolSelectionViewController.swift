@@ -38,7 +38,11 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     var signUpUser = ApiUserData()
     
     var selectedField = UITextField()
-    var selectedRow = 0
+    
+    var stateSelectedRow = 0
+    var schoolTypeSelectedRow = 0
+    var schoolSelectedRow = 0
+    var userTypeSelectedRow = 0
 
     @IBOutlet weak var _stateSelectionTextField: UITextField!
     let statePickerView = UIPickerView()
@@ -115,16 +119,16 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView == statePickerView){
-            selectedRow = row
+            stateSelectedRow = row
             selectedField = _stateSelectionTextField
         } else if(pickerView == schoolTypePickerView){
-            selectedRow = row
+            schoolTypeSelectedRow = row
             selectedField = _schoolTypeTextField
         } else if(pickerView == schoolPickerView){
-            selectedRow = row
+            schoolSelectedRow = row
             selectedField = _schoolSelectionTextField
         } else if(pickerView == userTypePickerView){
-            selectedRow = row
+            userTypeSelectedRow = row
             selectedField = _userTypeTextField
         }
     }
@@ -145,7 +149,7 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     @objc func donePicker() {
         selectedField.resignFirstResponder()
         if(selectedField == _stateSelectionTextField){
-            selectedField.text = states[selectedRow]
+            selectedField.text = states[stateSelectedRow]
             if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedState){
                 ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
                 TextFieldStyling.enableTextField(textField: _schoolTypeTextField)
@@ -158,11 +162,12 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
             }
             
         } else if(selectedField == _schoolTypeTextField){
-            selectedField.text = schoolTypes[selectedRow]
-            if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedSchoolType){
+            selectedField.text = schoolTypes[schoolTypeSelectedRow]
+            if(!(selectedField.text?.isEmpty)!){
                 ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
                 TextFieldStyling.disableTextField(textField: _userTypeTextField)
                  _userTypeTextField.text = ""
+                _schoolSelectionTextField.text = ""
                 selectedSchoolType = selectedField.text!
                 
                 //load screen
@@ -171,47 +176,53 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                 
                 ApiService.GetApiResponseData(url: ApiUrlService.GetSchoolScoreBySearch(schoolTypeId: schoolTypeHash[_schoolTypeTextField.text!]!, name: "", state: _stateSelectionTextField.text!, district: "", country: "")){ response in
                     if let response = response{
-                        if(response.status == "Success" && TextMethods.IsApiDescriptionValid(text: response.description)){
+                        if(response.status == "Success"){
                             let jsonData = response.description.data(using: .utf8)!
                             let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
                             
+                            self.schools = []
+                            self.schoolHash = [:]
                             if let array = json as? NSArray {
-                                self.schools = []
-                                self.schoolHash = [:]
                                 for obj in array{
                                     let apiSchoolData = ApiSchoolData(json: obj as! [String : Any])
                                     self.schools.append(apiSchoolData.Name)
                                     self.schoolHash[apiSchoolData.Name] = apiSchoolData.SchoolRowKey
                                 }
                             }
-                            
+                            self.schoolSelectedRow = 0
+                            if(self.schools.isEmpty){
+                                DispatchQueue.main.async {
+                                    let alert = UIAlertController(title: "Don't see your school?", message: "You can't SCHOOL this school yet. Let us know to add it!", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                                    self.present(alert, animated:true)
+                                    TextFieldStyling.disableTextField(textField: self._schoolSelectionTextField)
+                                }
+                            }else{
+                                DispatchQueue.main.async {
+                                    TextFieldStyling.enableTextField(textField: self._schoolSelectionTextField)
+                                    self.schoolPickerView.reloadAllComponents();
+                                }
+                            }
                         }
                     }
+                    
                     group.leave()
                 }
                 
                 group.wait()
-                if(schools.isEmpty){
-                    let alert = UIAlertController(title: "Don't see your school?", message: "You can't SCHOOL this school yet. Let us know to add it!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(alert, animated:true)
-                }else{
-                    TextFieldStyling.enableTextField(textField: _schoolSelectionTextField)
-                    _schoolSelectionTextField.text = ""
-                    schoolPickerView.reloadAllComponents();
-                }
             }
             
         } else if(selectedField == _schoolSelectionTextField){
-            selectedField.text = schools[selectedRow]
-            if(!(selectedField.text?.isEmpty)! && selectedField.text != selectedSchool){
+            selectedField.text = schools[schoolSelectedRow]
+
+            if(!(selectedField.text?.isEmpty)!){
                 ButtonStyling.disableButton(button: _finishSchoolSelectionButton)
                 TextFieldStyling.enableTextField(textField: _userTypeTextField)
                 _userTypeTextField.text = ""
                 selectedSchool = selectedField.text!
             }
         } else if(selectedField == _userTypeTextField){
-            selectedField.text = userTypes[selectedRow]
+            selectedField.text = userTypes[userTypeSelectedRow]
             if(!(selectedField.text?.isEmpty)!){
                 ButtonStyling.enableButton(button: _finishSchoolSelectionButton)
             }
@@ -275,7 +286,7 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
     @IBAction func doFinish(_ sender: Any) {
         signUpUser.SchoolRowKey = schoolHash[_schoolSelectionTextField.text!]!
         signUpUser.UserTypeRowKey = userTypeHash[_userTypeTextField.text!]!
-        var finished = false
+
         //load screen
         let group = DispatchGroup()
         group.enter()
@@ -292,7 +303,6 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
                         let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.signUpUser)
                         UserDefaults.standard.set(encodedData, forKey: "CurrentUser")
                         UserDefaults.standard.set(nil, forKey: "SignUpUser")
-                        finished = true
                         self.performSegue(withIdentifier: "signUpSchoolSegue", sender: self._finishSchoolSelectionButton)
                     }
                 }
@@ -307,9 +317,5 @@ class SchoolSelectionViewController: UIViewController, UIPickerViewDataSource, U
         }
         
         group.wait()
-        
-        if(finished){
-            self.performSegue(withIdentifier: "signUpSchoolSegue", sender: self._finishSchoolSelectionButton)
-        }
     }
 }
