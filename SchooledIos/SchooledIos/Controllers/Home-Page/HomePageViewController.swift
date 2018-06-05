@@ -53,6 +53,7 @@ class HomePageViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(showCompetitions), name: NSNotification.Name("ShowCompetitions"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showBlogs), name: NSNotification.Name("ShowBlogs"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showHelp), name: NSNotification.Name("ShowHelp"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showLogOut), name: NSNotification.Name("ShowLogOut"), object: nil)
     }
     
     @objc func showSettings(){
@@ -77,6 +78,11 @@ class HomePageViewController: UIViewController {
     
     @objc func showHelp(){
         performSegue(withIdentifier: "ShowHelp", sender: nil)
+    }
+    
+    @objc func showLogOut(){
+        UserDefaults.standard.set(nil, forKey: "CurrentUser")
+        performSegue(withIdentifier: "ShowLogOut", sender: nil)
     }
     
     func setLabelStyling(){

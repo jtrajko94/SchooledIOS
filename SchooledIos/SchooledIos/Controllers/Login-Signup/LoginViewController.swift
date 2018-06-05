@@ -83,11 +83,11 @@ class LoginViewController: UIViewController {
                         TextFieldStyling.errorStyling(textField: self._emailTextField)
                         TextFieldStyling.errorStyling(textField: self._passwordTextField)
                         ButtonStyling.enableButton(button: self._loginButton)
+                        
+                        let alert = UIAlertController(title: "Try Again!", message: "No user was found for that email and password.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(alert, animated:true)
                     }
-                    
-                    let alert = UIAlertController(title: "Try Again!", message: "No user was found for that email and password.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(alert, animated:true)
                 }
             }
         }
