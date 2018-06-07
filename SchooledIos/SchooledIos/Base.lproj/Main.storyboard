@@ -1757,6 +1757,7 @@
                     </view>
                     <connections>
                         <outlet property="_coursesCollectionView" destination="Fg9-rs-sjc" id="hVt-2V-9dD"/>
+                        <outlet property="_difficultySlider" destination="wAY-sD-Xgx" id="M8k-eh-Ofx"/>
                         <segue destination="RNH-Vt-YUU" kind="show" identifier="gameSelectionSegue" id="cMe-kG-7zC"/>
                     </connections>
                 </viewController>
@@ -2236,7 +2237,7 @@ AABZAAAAAAAAAAAAAAAAAAAwtQ
         <image name="ticket" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1rb-du-lD7"/>
+        <segue reference="cMe-kG-7zC"/>
         <segue reference="I7z-8g-rgD"/>
         <segue reference="cf2-cD-h7L"/>
         <segue reference="xtP-qc-Qvm"/>

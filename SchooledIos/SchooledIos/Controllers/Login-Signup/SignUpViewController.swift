@@ -91,8 +91,12 @@ class SignUpViewController: UIViewController {
                         errorMessage += "Please enter a new email. An account exists already with this one. \n"
                         TextFieldStyling.errorStyling(textField: self._eMailTextField)
                     }
+                    else if(response.status != "Success"){
+                        isValid = false
+                        errorMessage += "An error has occurred. \n"
+                        TextFieldStyling.errorStyling(textField: self._eMailTextField)
+                    }
                 }
-                
                 group.leave()
             }
             
