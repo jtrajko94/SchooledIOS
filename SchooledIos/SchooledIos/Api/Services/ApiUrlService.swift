@@ -42,8 +42,9 @@ class ApiUrlService{
         return ApiUrl + "subject/get/?id=" + id
     }
     
-    static func MergeSubject(subjectJson: String) -> String{
-        return ApiUrl + "subject/merge/?subjectjson=" + subjectJson
+    //Subject API Functions
+    static func GetCourseById(id: String) -> String{
+        return ApiUrl + "course/get/?id=" + id
     }
     
     //School API Functions

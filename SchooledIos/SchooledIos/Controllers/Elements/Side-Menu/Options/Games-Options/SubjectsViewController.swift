@@ -14,10 +14,10 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     //IDs is list of subject internal ids, Mappings maps those ids with icons
     //SQL will pull list of all ids, and create mapping url on collection view load
-    var subjectIds = ["subject"]
-    var subjectMappings = ["subject": "image"]
-    let courseIds = [0,1,2,3,4,5]
-    let courseMappings = [0:"ticket", 1: "present", 2:"present", 3:"present", 4: "present", 5: "present"]
+    var subjectIds : [String] = []
+    var subjectMappings : [String:String] = [:]
+    var courseIds : [String] = []
+    var courseMappings : [String:String] = ["":"ticket"]
     var currentUser = ApiUserData.getCurrentUser()!
     
     //use this if a subject has been picked
@@ -32,8 +32,6 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
             self._difficultySlider.setValue(Float(self.currentUser.GameDifficulty), animated: true) },
                                    completion: nil)
-        
-        //update subject ids and subject mappings
         setSubjects()
     }
     
@@ -67,6 +65,35 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
         group.wait()
     }
     
+    func setCourses(){
+        //load screen
+        let group = DispatchGroup()
+        group.enter()
+        
+        ApiService.GetApiResponseData(url: ApiUrlService.GetCourseById(id: "")){ response in
+            if let response = response{
+                if(response.status == "Success"){
+                    let jsonData = response.description.data(using: .utf8)!
+                    let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                    
+                    self.courseIds = []
+                    self.courseMappings = ["":"ticket"]
+                    if let array = json as? NSArray {
+                        for obj in array{
+                            let apiSubjectData = ApiCourseData(json: obj as! [String : Any])
+                            self.courseIds.append(apiSubjectData.CourseRowKey)
+                            self.courseMappings[apiSubjectData.CourseRowKey] = apiSubjectData.Image
+                        }
+                    }
+                }
+            }
+            
+            group.leave()
+        }
+        
+        group.wait()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(subjectSelected != ""){
             return courseIds.count
@@ -74,12 +101,15 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
         return subjectIds.count
     }
     
-    //Change button based on the subject selected. The Subject titles should be the subject text for the courses, that you use to query in SQL
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CoursesCollectionViewCell
         if(subjectSelected != ""){
-            cell._cellButton.tag = courseIds[indexPath.item]
-            cell._cellButton.setImage(UIImage(named: courseMappings[cell._cellButton.tag]!), for: UIControlState.normal)
+            cell._cellButton.tag = indexPath.item
+            let rowkey = courseIds[indexPath.item]
+            let url = URL(string: courseMappings[rowkey]!)
+            let data = try? Data(contentsOf: url!)
+            cell._cellButton.setImage(UIImage(named: courseMappings[rowkey]!), for: UIControlState.normal)
+            cell._cellButton.setImage(UIImage(data: data!), for: UIControlState.normal)
         } else {
             cell._cellButton.tag = indexPath.item
             let rowkey = subjectIds[indexPath.item]
@@ -89,7 +119,6 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
             cell._cellButton.setImage(UIImage(data: data!), for: UIControlState.normal)
             
         }
-        
         cell._cellButton.addTarget(self, action: #selector(cellButtonClicked), for: UIControlEvents.touchUpInside)
         return cell
     }
@@ -106,6 +135,7 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         else if(subjectSelected == "" || button.tag == 0){
             subjectSelected = subjectIds[button.tag]
+            setCourses()
             _coursesCollectionView.reloadData()
         }else{
             performSegue(withIdentifier: "gameSelectionSegue", sender: button)
