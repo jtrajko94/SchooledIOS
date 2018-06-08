@@ -76,8 +76,8 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
                     let jsonData = response.description.data(using: .utf8)!
                     let json = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
                     
-                    self.courseIds = []
-                    self.courseMappings = ["":"ticket"]
+                    self.courseIds = [""]
+                    self.courseMappings = ["":"https://schooled.blob.core.windows.net/schooled/course-images/back.png"]
                     if let array = json as? NSArray {
                         for obj in array{
                             let apiSubjectData = ApiCourseData(json: obj as! [String : Any])
@@ -138,6 +138,20 @@ class SubjectsViewController: UIViewController, UICollectionViewDataSource, UICo
             setCourses()
             _coursesCollectionView.reloadData()
         }else{
+            let newValue: Int = Int(round(_difficultySlider.value))
+            if(newValue != currentUser.GameDifficulty){
+                currentUser.GameDifficulty = newValue
+                let encodedData = NSKeyedArchiver.archivedData(withRootObject: currentUser)
+                UserDefaults.standard.set(encodedData, forKey: "CurrentUser")
+                
+                let jsonEncoder = JSONEncoder()
+                let jsonData = try? jsonEncoder.encode(currentUser)
+                let jsonString = String(data: jsonData!, encoding: .utf8)
+                
+                //TODO: This should update user record. Password should not be needed if you merge. 
+                ApiService.GetApiResponseData(url: ApiUrlService.MergeUser(userJson: jsonString!)){_ in }
+            }
+            
             performSegue(withIdentifier: "gameSelectionSegue", sender: button)
         }
     }
