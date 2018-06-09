@@ -40,5 +40,8 @@ class GameSelectionViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(list[indexPath.row])
+        if(indexPath.row == 0){
+                self.performSegue(withIdentifier: "flappySchoolSegue", sender: self)
+        }
     }
 }

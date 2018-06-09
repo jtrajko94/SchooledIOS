@@ -40,6 +40,11 @@
 		0576AF9A20ABDAD30071E1C1 /* TextMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9920ABDAD30071E1C1 /* TextMethods.swift */; };
 		0576AF9C20ABDEF80071E1C1 /* ApiUrlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9B20ABDEF80071E1C1 /* ApiUrlService.swift */; };
 		0576AF9E20ABE1240071E1C1 /* ApiUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */; };
+		0590985E20CC4507004236EB /* FlappyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590985D20CC4507004236EB /* FlappyGameViewController.swift */; };
+		0590986420CC472C004236EB /* FlappyGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590986320CC472C004236EB /* FlappyGameScene.swift */; };
+		0590986620CC486F004236EB /* FlappyGameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590986520CC486F004236EB /* FlappyGameElements.swift */; };
+		0590986920CC4DCE004236EB /* CoinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0590986820CC4DCE004236EB /* CoinSound.mp3 */; };
+		0590986B20CC5311004236EB /* Assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0590986A20CC5310004236EB /* Assets.atlas */; };
 		05A4B73D20B069C100A2858A /* ApiRaffelEntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B73C20B069C100A2858A /* ApiRaffelEntryData.swift */; };
 		05A4B73F20B06AEF00A2858A /* ApiQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B73E20B06AEF00A2858A /* ApiQuestionData.swift */; };
 		05A4B74120B06E7800A2858A /* ApiGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A4B74020B06E7800A2858A /* ApiGameData.swift */; };
@@ -94,6 +99,11 @@
 		0576AF9920ABDAD30071E1C1 /* TextMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMethods.swift; sourceTree = "<group>"; };
 		0576AF9B20ABDEF80071E1C1 /* ApiUrlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlService.swift; sourceTree = "<group>"; };
 		0576AF9D20ABE1240071E1C1 /* ApiUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUserData.swift; sourceTree = "<group>"; };
+		0590985D20CC4507004236EB /* FlappyGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyGameViewController.swift; sourceTree = "<group>"; };
+		0590986320CC472C004236EB /* FlappyGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyGameScene.swift; sourceTree = "<group>"; };
+		0590986520CC486F004236EB /* FlappyGameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyGameElements.swift; sourceTree = "<group>"; };
+		0590986820CC4DCE004236EB /* CoinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CoinSound.mp3; sourceTree = "<group>"; };
+		0590986A20CC5310004236EB /* Assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Assets.atlas; sourceTree = "<group>"; };
 		05A4B73C20B069C100A2858A /* ApiRaffelEntryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRaffelEntryData.swift; sourceTree = "<group>"; };
 		05A4B73E20B06AEF00A2858A /* ApiQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuestionData.swift; sourceTree = "<group>"; };
 		05A4B74020B06E7800A2858A /* ApiGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGameData.swift; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 		0508446B2030027300485109 /* SchooledIos */ = {
 			isa = PBXGroup;
 			children = (
+				0590986020CC46E5004236EB /* Games */,
 				0576AF9020ABB9510071E1C1 /* Api */,
 				0531D9CB2031663A007C44BB /* Controllers */,
 				0531D9C020315CAB007C44BB /* Utilities */,
@@ -193,6 +204,7 @@
 				050844732030027300485109 /* Assets.xcassets */,
 				050844752030027300485109 /* LaunchScreen.storyboard */,
 				050844782030027300485109 /* Info.plist */,
+				0590986A20CC5310004236EB /* Assets.atlas */,
 			);
 			path = SchooledIos;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 		0531D9CB2031663A007C44BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0590985F20CC451B004236EB /* Games */,
 				054FBA312038BFD700FD42B1 /* Elements */,
 				054FBA2620389BA900FD42B1 /* Home-Page */,
 				054FBA2320389B5E00FD42B1 /* Password-Reset */,
@@ -372,6 +385,41 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		0590985F20CC451B004236EB /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				0590985D20CC4507004236EB /* FlappyGameViewController.swift */,
+			);
+			name = Games;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		0590986020CC46E5004236EB /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				0590986220CC4712004236EB /* Flappy */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		0590986220CC4712004236EB /* Flappy */ = {
+			isa = PBXGroup;
+			children = (
+				0590986720CC4D8E004236EB /* Sounds */,
+				0590986320CC472C004236EB /* FlappyGameScene.swift */,
+				0590986520CC486F004236EB /* FlappyGameElements.swift */,
+			);
+			path = Flappy;
+			sourceTree = "<group>";
+		};
+		0590986720CC4D8E004236EB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0590986820CC4DCE004236EB /* CoinSound.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,6 +480,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				050844772030027300485109 /* LaunchScreen.storyboard in Resources */,
+				0590986920CC4DCE004236EB /* CoinSound.mp3 in Resources */,
+				0590986B20CC5311004236EB /* Assets.atlas in Resources */,
 				050844742030027300485109 /* Assets.xcassets in Resources */,
 				050844722030027300485109 /* Main.storyboard in Resources */,
 			);
@@ -446,7 +496,9 @@
 			files = (
 				054FBA19203528B600FD42B1 /* SideMenuContainerViewController.swift in Sources */,
 				0576AF9A20ABDAD30071E1C1 /* TextMethods.swift in Sources */,
+				0590985E20CC4507004236EB /* FlappyGameViewController.swift in Sources */,
 				054FBA152034005100FD42B1 /* SchoolSelectionViewController.swift in Sources */,
+				0590986420CC472C004236EB /* FlappyGameScene.swift in Sources */,
 				050328632054745A00010489 /* BlogViewController.swift in Sources */,
 				05A4B74120B06E7800A2858A /* ApiGameData.swift in Sources */,
 				05A4B74720B0748900A2858A /* ApiCompetitionData.swift in Sources */,
@@ -460,6 +512,7 @@
 				05B95A9320AFBDC6003EB195 /* ApiSchoolScoreData.swift in Sources */,
 				054FBA1B20352E7E00FD42B1 /* SettingsViewController.swift in Sources */,
 				05E16F2B2054C8E1009E9198 /* IndividualCompetitionViewController.swift in Sources */,
+				0590986620CC486F004236EB /* FlappyGameElements.swift in Sources */,
 				0576AF9720ABCC000071E1C1 /* ApiService.swift in Sources */,
 				0508446F2030027300485109 /* ViewController.swift in Sources */,
 				054FBA212037C50F00FD42B1 /* PasswordSuccessfulViewController.swift in Sources */,
